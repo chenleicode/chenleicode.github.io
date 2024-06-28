@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "My site"
-  text: "This is Chen Lei's blog"
-  tagline: My great project tagline
+  # name: "My site"
+  text: "Welcome\nThis is Chen Lei's blog"
+  # tagline: My great project tagline
   actions:
     - theme: brand
       text: Markdown Examples
