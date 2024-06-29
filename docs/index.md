@@ -8,7 +8,7 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: 什么是 Vitepress
+      text: What is VitePress
       link: /guide/what-is-vitepress
     - theme: alt
       text: Markdown Examples
