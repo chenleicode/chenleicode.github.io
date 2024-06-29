@@ -4,24 +4,50 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Chen Lei's Blog",
   description: "This is Chen Lei's blog",
+  srcDir: './docs',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      // { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
+      { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          { text: 'test1 sidebar title', link: '/test/test1' },
-          { text: 'test2 sidebar title', link: '/test/test2' }
-        ]
-      }
-    ],
+    sidebar: {
+      '/guide/': [
+        {
+          text: 'Guide',
+          items: [
+            { text: 'what is VitePress', link: '/guide/what-is-vitepress' },
+            { text: 'One', link: '/guide/one' },
+            { text: 'Two', link: '/guide/two' }
+          ]
+        }
+      ],
+      '/examples/': [
+        {
+          text: 'Examples',
+          collapsed: false,
+          items: [
+            { text: 'markdown-examples', link: '/examples/markdown-examples' },
+            { text: 'api-examples', link: '/examples/api-examples' },
+          ]
+        },
+        {
+          text: 'Examples222',
+          collapsed: false,
+          items: [
+            { text: 'markdown-examples-222', link: '/examples/markdown-examples-2' },
+            { text: 'api-examples-222', link: '/examples/api-examples-2' },
+          ]
+        }
+      ]
+    },
+
+    // footer: {
+    //   message: '基于 MIT 许可发布',
+    //   copyright: `版权所有 © ${new Date().getFullYear()} 陈磊`
+    // },
 
     docFooter: {
       prev: '上一页',
