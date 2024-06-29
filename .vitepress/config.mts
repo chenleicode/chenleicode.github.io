@@ -13,6 +13,11 @@ export default defineConfig({
       { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
 
+    // 目前显示语言是英语，暂没实现中文显示
+    search: {
+      provider: 'local',
+    },
+
     sidebar: {
       '/guide/': [
         {

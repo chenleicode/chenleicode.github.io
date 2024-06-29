@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Chen Lei's Blog"
-  text: "Welcome, This is Chen Lei's blog"
+  text: "Welcome,\nThis is Chen Lei's blog"
   tagline: My great project tagline
   actions:
     - theme: brand
