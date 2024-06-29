@@ -44,10 +44,10 @@ export default defineConfig({
       ]
     },
 
-    // footer: {
-    //   message: '基于 MIT 许可发布',
-    //   copyright: `版权所有 © ${new Date().getFullYear()} 陈磊`
-    // },
+    footer: {
+      message: '基于 MIT 许可发布',
+      copyright: `版权所有 © ${new Date().getFullYear()} 陈磊`
+    },
 
     docFooter: {
       prev: '上一页',

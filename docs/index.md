@@ -14,7 +14,7 @@ hero:
       text: Markdown Examples
       link: /examples/markdown-examples
   image:
-    src: /public/vitepress-logo-large.webp
+    src: /vitepress-logo-large.webp
     alt: VitePress
 
 features:
