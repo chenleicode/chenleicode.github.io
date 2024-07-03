@@ -1,23 +1,23 @@
-# one
+# 依赖安装报错：pngquant failed to build, make sure that libpng-dev is installed
 
-this is one page
+这个报错有很多原因，我只介绍我出现的这个原因以及解决办法。
 
-## 文章标题1
+## 操作系统
 
-这是哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈，
+Windows 10
 
-VitePress 灵感来源于 VuePress。最初的 VuePress 基于 Vue 2 和 webpack。借助 Vue 3 和 Vite，VitePress 提供了更好的开发体验、更好的生产性能、更精美的默认主题和更灵活的自定义 API。
+## 原因
 
-VitePress 和 VuePress 之间的 API 区别主要在于主题和自定义。如果使用的是带有默认主题的 VuePress 1，迁移到 VitePress 应该相对简单。
+我是一个强迫症，没事的时候总喜欢删除电脑的流氓软件（我当时觉得没用），其中我删除了一下两个软件，个人觉得出现报错的原因是删除这两个电脑自带的程序后，在安装 pngquant 的过程中，没有编译 pngquant 二进制文件的环境了，因此出现报错。
 
-VuePress 2 我们也投入了精力，它也支持 Vue 3 和 Vite，与 VuePress 1 的兼容性更好。但是，并行维护两个 SSG 是难以持续的，因此 Vue 团队决定将重点放在 VitePress，作为长期的主要 SSG 选择推荐。
+![删除的软件](../Snipaste_2024-07-03_08-44-20.png)
 
-## 文章标题2
+> 建议：不要删除电脑自带的 Microsoft Visual C++
 
-哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈
+## 解决办法
 
-VitePress 灵感来源于 VuePress。最初的 VuePress 基于 Vue 2 和 webpack。借助 Vue 3 和 Vite，VitePress 提供了更好的开发体验、更好的生产性能、更精美的默认主题和更灵活的自定义 API。
+重新安装以下软件就可以了，应该是可以只安装一个，我是安装了两个（X86, X64）
 
-VitePress 和 VuePress 之间的 API 区别主要在于主题和自定义。如果使用的是带有默认主题的 VuePress 1，迁移到 VitePress 应该相对简单。
+![需要安装的软件](../Snipaste_2024-07-03_08-23-11.png)
 
-VuePress 2 我们也投入了精力，它也支持 Vue 3 和 Vite，与 VuePress 1 的兼容性更好。但是，并行维护两个 SSG 是难以持续的，因此 Vue 团队决定将重点放在 VitePress，作为长期的主要 SSG 选择推荐。
+链接：https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version

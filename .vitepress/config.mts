@@ -24,7 +24,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             { text: 'what is VitePress', link: '/guide/what-is-vitepress' },
-            { text: 'One', link: '/guide/one' },
+            { text: '依赖安装报错：pngquant failed to build, make sure that libpng-dev is installed', link: '/guide/one' },
             { text: 'Two', link: '/guide/two' }
           ]
         }
