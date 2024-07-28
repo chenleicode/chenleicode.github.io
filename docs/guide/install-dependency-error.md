@@ -1,4 +1,4 @@
-# 依赖安装报错：pngquant failed to build, make sure that libpng-dev is installed
+# 安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed
 
 这个报错有很多原因，我只介绍我出现的这个原因以及解决办法。
 

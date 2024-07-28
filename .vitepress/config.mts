@@ -8,8 +8,8 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      // { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/what-is-vitepress', activeMatch: '/guide/' },
+      { text: 'Home', link: '/' },
+      { text: 'Guide', link: '/guide/git-submodule', activeMatch: '/guide/' },
       { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
 
@@ -23,9 +23,10 @@ export default defineConfig({
         {
           text: 'Guide',
           items: [
-            { text: 'what is VitePress', link: '/guide/what-is-vitepress' },
-            { text: '依赖安装报错：pngquant failed to build, make sure that libpng-dev is installed', link: '/guide/one' },
-            { text: 'arrow-function-bracket', link: '/guide/arrow-function-bracket' }
+            // { text: 'what is VitePress', link: '/guide/what-is-vitepress' },
+            { text: '安装依赖报错', link: '/guide/install-dependency-error' },
+            { text: 'arrow function bracket', link: '/guide/arrow-function-bracket' },
+            { text: 'git submodule', link: '/guide/git-submodule' }
           ]
         }
       ],

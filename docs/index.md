@@ -8,8 +8,8 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: What is VitePress
-      link: /guide/what-is-vitepress
+      text: git submodule
+      link: /guide/git-submodule
     - theme: alt
       text: Markdown Examples
       link: /examples/markdown-examples

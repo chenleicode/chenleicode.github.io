@@ -1,6 +1,6 @@
 # 简介
 
-这是一个学习使用 VitePress 的仓库，也算是一个 VitePress 的模板。
+这是一个学习使用 VitePress 的仓库。
 
 ## 安装依赖
 
@@ -16,8 +16,7 @@ npm run docs:dev
 
 # 现状
 
-现在基本上是一个 VitePress 的模板，内容都不是自己写的，有一篇文章是从 VitePress 官方网站复制过来的，还有一部分是自动生成的。
-
+现在基本上是一个 VitePress 的模板，现在只有 guide 目录下几篇文章。
 
 # 未来
 
