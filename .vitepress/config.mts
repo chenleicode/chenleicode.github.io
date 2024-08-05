@@ -1,45 +1,43 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "Chen Lei's Blog",
+  title: "编程之旅",
   description: "This is Chen Lei's blog",
   srcDir: './docs',
+
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/git-submodule', activeMatch: '/guide/' },
+      // { text: 'Home', link: '/' },
+      { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
       { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
 
     sidebar: {
-      '/guide/': [
-        {
-          text: 'Guide',
-          items: [
-            { text: '安装依赖报错', link: '/guide/install-dependency-error' },
-            { text: 'arrow function bracket', link: '/guide/arrow-function-bracket' },
-            { text: 'git submodule', link: '/guide/git-submodule' }
-          ]
-        }
-      ],
-      '/examples/': [
-        {
-          text: 'Examples',
-          collapsed: false,
-          items: [
-            { text: 'markdown-examples', link: '/examples/markdown-examples' },
-            { text: 'api-examples', link: '/examples/api-examples' },
-          ]
-        },
-        {
-          text: 'Examples222',
-          collapsed: false,
-          items: [
-            { text: 'markdown-examples-222', link: '/examples/markdown-examples-2' },
-            { text: 'api-examples-222', link: '/examples/api-examples-2' },
-          ]
-        }
-      ]
+      '/frontend/': {
+        base: '/frontend/',
+        items: [
+          {
+            text: '前端',
+            items: [
+              { text: '安装依赖报错', link: 'install-dependency-error' },
+              { text: 'arrow function bracket', link: 'arrow-function-bracket' },
+              { text: 'git submodule', link: 'git-submodule' }
+            ]
+          }
+        ]
+      },
+      '/examples/': {
+        base: '/examples/',
+        items: [
+          {
+            text: 'examples',
+            items: [
+              { text: 'markdown examples', link: 'markdown-examples' },
+              { text: 'api examples', link: 'api-examples' },
+            ]
+          }
+        ]
+      }
     },
 
     // 目前搜索显示语言是英语，暂没实现中文显示
@@ -56,11 +54,7 @@ export default defineConfig({
       prev: '上一页',
       next: '下一页'
     },
-
-    outline: {
-      label: '页面导航'
-    },
-
+    
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
@@ -68,7 +62,9 @@ export default defineConfig({
         timeStyle: 'medium'
       }
     },
-    
+
+    outline: [1, 3],
+    outlineTitle: '页面导航',
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
     darkModeSwitchLabel: '主题',

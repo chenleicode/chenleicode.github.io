@@ -1,23 +1,18 @@
 ---
 layout: home
 
-title: CL Blog
-titleTemplate: hahaha
-
 hero:
-  name: "Chen Lei's Blog"
-  text: "This is Chen Lei's blog"
-  tagline: "Funny, interesting and useful"
+  name: "编程之旅"
+  text: "一个专注内容的网站"
+  tagline: "有趣，实用"
   actions:
     - theme: brand
+      text: 此网站是什么
+      link: /what-is-site
+    - theme: alt
       text: git submodule
-      link: /guide/git-submodule
-    - theme: alt
-      text: Markdown Examples
-      link: /examples/markdown-examples
-    - theme: alt
-      text: GitHub
-      link: https://github.com/chenlei0608/chenlei-blog
+      link: /frontend/git-submodule
+
   image:
     src: /vitepress-logo-large.webp
     alt: VitePress
