@@ -1,29 +1,21 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Chen Lei's Blog",
   description: "This is Chen Lei's blog",
   srcDir: './docs',
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guide', link: '/guide/git-submodule', activeMatch: '/guide/' },
       { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
 
-    // 目前显示语言是英语，暂没实现中文显示
-    search: {
-      provider: 'local',
-    },
-
     sidebar: {
       '/guide/': [
         {
           text: 'Guide',
           items: [
-            // { text: 'what is VitePress', link: '/guide/what-is-vitepress' },
             { text: '安装依赖报错', link: '/guide/install-dependency-error' },
             { text: 'arrow function bracket', link: '/guide/arrow-function-bracket' },
             { text: 'git submodule', link: '/guide/git-submodule' }
@@ -48,6 +40,11 @@ export default defineConfig({
           ]
         }
       ]
+    },
+
+    // 目前搜索显示语言是英语，暂没实现中文显示
+    search: {
+      provider: 'local',
     },
 
     footer: {
@@ -79,7 +76,7 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/chenlei0608' } // 陈磊的github个人主页
+      { icon: 'github', link: 'https://github.com/chenlei0608' }
     ]
   }
 })
