@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   base: "/chenlei-blog/",
   title: "编程之旅",
-  description: "This is Chen Lei's blog",
+  description: "这是使用 VitePress 搭建的个人博客，主要是记录一些个人的学习笔记",
   srcDir: './docs',
 
   themeConfig: {

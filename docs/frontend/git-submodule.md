@@ -1,6 +1,6 @@
 # git submodule
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块。每个子模块都有自己的历史记录和版本控制，可以独立于主项目进行开发和维护。
 
 ## git submodule status
 
