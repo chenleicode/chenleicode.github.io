@@ -29,7 +29,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: '安装依赖报错', link: 'install-dependency-error' },
-              { text: 'arrow function bracket', link: 'arrow-function-bracket' }
+              { text: '箭头函数-括号', link: 'arrow-function-bracket' }
             ]
           }
         ]
@@ -73,6 +73,7 @@ export default defineConfig({
 
     outline: [1, 3],
     outlineTitle: '页面导航',
+
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
     darkModeSwitchLabel: '主题',
