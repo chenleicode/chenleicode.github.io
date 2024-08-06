@@ -7,7 +7,7 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '主页', link: '/' },
       { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
       { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
