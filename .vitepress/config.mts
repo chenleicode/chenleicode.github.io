@@ -7,7 +7,7 @@ export default defineConfig({
 
   themeConfig: {
     nav: [
-      // { text: 'Home', link: '/' },
+      { text: 'Home', link: '/' },
       { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
       { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
     ],
@@ -17,11 +17,19 @@ export default defineConfig({
         base: '/frontend/',
         items: [
           {
-            text: '前端',
+            text: 'Git',
+            collapsed: false,
+            items: [
+              { text: 'git submodule', link: 'git-submodule' },
+              { text: 'git commit', link: 'git-commit' }
+            ]
+          },
+          {
+            text: '其他',
+            collapsed: false,
             items: [
               { text: '安装依赖报错', link: 'install-dependency-error' },
-              { text: 'arrow function bracket', link: 'arrow-function-bracket' },
-              { text: 'git submodule', link: 'git-submodule' }
+              { text: 'arrow function bracket', link: 'arrow-function-bracket' }
             ]
           }
         ]
