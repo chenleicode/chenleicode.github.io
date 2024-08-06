@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: "/chenlei-blog/",
   title: "编程之旅",
   description: "This is Chen Lei's blog",
   srcDir: './docs',
