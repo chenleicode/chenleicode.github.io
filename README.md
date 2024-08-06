@@ -1,6 +1,6 @@
 # 简介
 
-这是一个学习使用 VitePress 的仓库
+这是使用 VitePress 搭建的个人博客，主要是记录一些个人的学习笔记。
 
 ## 安装依赖
 
@@ -11,5 +11,5 @@ npm install
 ## 本地启动运行
 
 ```sh
-npm run docs:dev
+npm run dev
 ```
