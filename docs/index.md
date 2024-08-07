@@ -24,11 +24,15 @@ features:
   - title: git commit
     details: 'Git commit 是 Git 版本控制系统中用于记录和描述每次代码变更的重要信息。它提供了一个清晰的记录，便于团队协作和历史追溯'
     link: /frontend/git-commit
-    linkText: See all details
+    linkText: 查看详细内容
   - title: git submodule
     details: 'Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块。每个子模块都有自己的历史记录和版本控制，可以独立于主项目进行开发和维护'
     link: /frontend/git-submodule
-    linkText: See all details
+    linkText: 查看详细内容
+  - title: 使用 VitePress + GitHub Pages 搭建网站
+    details: 'GitHub Pages 是 GitHub 提供的一项静态网站托管服务，可以将你的 GitHub 仓库中的内容直接发布为网页。简单易用，特别适合个人博客、项目文档和小型网站'
+    link: /frontend/github-deploy
+    linkText: 查看详细内容
 ---
 
 
