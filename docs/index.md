@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "编程之旅"
-  text: "使用VitePress搭建，专注内容的个人博客"
+  text: "非正式的技术分享博客"
   tagline: "有趣，实用，好玩"
   actions:
     - theme: brand
@@ -13,7 +13,7 @@ hero:
       text: 关于我
       link: '/me'
     - theme: alt
-      text: 查看我的GitHub主页
+      text: 查看我的 GitHub 主页
       link: 'https://github.com/chenlei0608'
 
   image:
@@ -26,8 +26,12 @@ features:
     link: /frontend/git-commit
     linkText: 查看详细内容
   - title: git submodule
-    details: 'Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块。每个子模块都有自己的历史记录和版本控制，可以独立于主项目进行开发和维护'
+    details: 'Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块'
     link: /frontend/git-submodule
+    linkText: 查看详细内容
+  - title: pngquant failed to build, make sure that libpng-dev is installed
+    details: '安装依赖报错，这个报错有很多原因，我只介绍我出现的这个原因以及解决办法'
+    link: /frontend/install-dependency-error
     linkText: 查看详细内容
   - title: 使用 VitePress + GitHub Pages 搭建网站
     details: 'GitHub Pages 是 GitHub 提供的一项静态网站托管服务，可以将你的 GitHub 仓库中的内容直接发布为网页。简单易用，特别适合个人博客、项目文档和小型网站'
