@@ -10,8 +10,7 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
-      { text: 'Examples', link: '/examples/markdown-examples', activeMatch: '/examples/' }
+      { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' }
     ],
 
     sidebar: {
@@ -34,18 +33,6 @@ export default defineConfig({
               { text: '箭头函数-括号', link: 'arrow-function-bracket' },
               { text: '使用 VitePress + GitHub Pages 搭建网站', link: 'github-deploy' },
               { text: '必要的最佳实践', link: 'best-practice' }
-            ]
-          }
-        ]
-      },
-      '/examples/': {
-        base: '/examples/',
-        items: [
-          {
-            text: 'examples',
-            items: [
-              { text: 'markdown examples', link: 'markdown-examples' },
-              { text: 'api examples', link: 'api-examples' },
             ]
           }
         ]
