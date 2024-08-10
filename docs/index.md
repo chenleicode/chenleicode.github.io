@@ -21,9 +21,9 @@ hero:
     alt: VitePress
 
 features:
-  - title: git commit
-    details: 'Git commit 是 Git 版本控制系统中用于记录和描述每次代码变更的重要信息。它提供了一个清晰的记录，便于团队协作和历史追溯'
-    link: /frontend/git-commit
+  - title: val => {foo = val} 和 val => (foo = val)
+    details: '在JavaScript中，箭头函数（Arrow Functions）有一些语法细节需要注意，尤其是当你使用大括号 `{}` 或圆括号 `()` 来定义函数体时'
+    link: /frontend/arrow-function-bracket
     linkText: 查看详细内容
   - title: git submodule
     details: 'Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块'
