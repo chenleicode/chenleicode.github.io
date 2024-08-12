@@ -63,7 +63,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: '特别说明：首页暂时借用 VitePress 的 Logo，如有侵权请联系我删除'
+      copyright: '特别说明：首页暂时使用了 VitePress 的 Logo，如有侵权请联系我删除'
     },
 
     docFooter: {
