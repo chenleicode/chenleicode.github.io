@@ -12,9 +12,6 @@ hero:
     - theme: alt
       text: 关于我
       link: '/me'
-    - theme: alt
-      text: 我的 GitHub 主页
-      link: 'https://github.com/chenlei0608'
 
   image:
     src: /vitepress-logo-large.webp
