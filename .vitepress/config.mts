@@ -10,7 +10,8 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: '主页', link: '/' },
-      { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' }
+      { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
+      { text: '反馈', link: 'https://github.com/chenlei0608/blog/issues' }
     ],
 
     sidebar: {
