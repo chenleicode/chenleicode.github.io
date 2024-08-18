@@ -42,7 +42,12 @@ export default defineConfig({
       '/life-essay/': {
         base: '/life-essay/',
         items: [
-          { text: '恶意', link: 'malice' }
+          {
+            text: '随笔',
+            items: [
+              { text: '恶意读后感', link: 'malice' }
+            ]
+          }
         ]
       }
     },
