@@ -11,6 +11,7 @@ export default defineConfig({
     nav: [
       { text: '主页', link: '/' },
       { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
+      { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' },
       { text: '反馈', link: 'https://github.com/chenlei0608/blog/issues' }
     ],
 
@@ -36,6 +37,12 @@ export default defineConfig({
               { text: '必要的最佳实践', link: 'best-practice' }
             ]
           }
+        ]
+      },
+      '/life-essay/': {
+        base: '/life-essay/',
+        items: [
+          { text: '恶意', link: 'malice' }
         ]
       }
     },
