@@ -1,5 +1,4 @@
-
-今天分享的是使用 VitePress 搭建并自动化部署个人网站。
+今天分享的主题是使用 VitePress 搭建并自动化部署个人网站。
 
 ## VitePress 是什么
 [VitePress](https://vitepress.dev/zh/guide/what-is-vitepress) 是一个静态站点生成器 (SSG)，专为构建快速、以内容为中心的站点而设计。简而言之，VitePress 获取用 Markdown 编写的内容，对其应用主题，并生成可以轻松部署到任何地方的静态 HTML 页面。
@@ -118,10 +117,10 @@ jobs:
 ```
 
 > [!NOTE]
-> - 如果你使用的是 Github Pages 并部署到 user.github.io/repo/，请将 base 设置为 /repo/
+> - 如果你使用的是 Github Pages 并部署到 `https://user-name.github.io/repo-name/`，请将 base 设置为 `/repo-name/`
 > - 构建输出目录，如果按照上文的快速初始化的目录，是 `docs/.vitepress/dist`
 
 2. 在存储库设置中的“Pages”菜单项下，选择“Build and deployment > Source > GitHub Actions”
 ![vitepress-demo-github-pages](/Snipaste_2024-08-07_16-24-24.png)
 
-3. 将更改推送到 `main` 分支并等待 GitHub Action 工作流完成。你应该看到站点部署到 `https://username.github.io/repo/`。你的站点将在每次推送到 `main` 分支时自动部署。
+3. 将更改推送到 `main` 分支并等待 GitHub Action 工作流完成。你应该看到站点部署到 `https://user-name.github.io/repo-name/`。你的站点将在每次推送到 `main` 分支时自动部署。
