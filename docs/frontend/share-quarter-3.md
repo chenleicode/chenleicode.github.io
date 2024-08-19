@@ -9,10 +9,10 @@ https://chenlei0608.github.io/blog/
 
 ## 快速搭建一个 Demo
 ```bash
-# 创建一个文件夹
+# 创建文件目录
 $ mkdir vitepress-demo
 
-# 进入文件夹
+# 进入文件目录
 $ cd vitepress-demo
 
 # 安装 vitepress
