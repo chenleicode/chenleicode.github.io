@@ -34,7 +34,8 @@ export default defineConfig({
               { text: '安装依赖报错', link: 'install-dependency-error' },
               { text: '箭头函数-括号', link: 'arrow-function-bracket' },
               { text: '使用 VitePress + GitHub Pages 搭建网站', link: 'github-deploy' },
-              { text: '必要的最佳实践', link: 'best-practice' }
+              { text: '必要的最佳实践', link: 'best-practice' },
+              { text: '第三季度技术分享', link: 'share-quarter-3' }
             ]
           }
         ]
@@ -45,7 +46,7 @@ export default defineConfig({
           {
             text: '随笔',
             items: [
-              { text: '恶意读后感', link: 'malice' }
+              { text: '《恶意》读后感', link: 'malice' }
             ]
           }
         ]
@@ -92,8 +93,13 @@ export default defineConfig({
       }
     },
 
-    outline: [1, 3],
-    outlineTitle: '页面导航',
+    // outline: [1, 3],
+    // outlineTitle: '页面导航',
+
+    outline: {
+      level: 'deep',
+      label: '页面导航'
+    },
 
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',
