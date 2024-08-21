@@ -93,8 +93,13 @@ export default defineConfig({
       }
     },
 
-    outline: [1, 3],
-    outlineTitle: '页面导航',
+    // outline: [1, 3],
+    // outlineTitle: '页面导航',
+
+    outline: {
+      level: 'deep',
+      label: '页面导航'
+    },
 
     returnToTopLabel: '回到顶部',
     sidebarMenuLabel: '菜单',

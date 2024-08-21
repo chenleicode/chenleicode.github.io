@@ -1,5 +1,4 @@
 ---
-outline: false
 footer: false
 ---
 
