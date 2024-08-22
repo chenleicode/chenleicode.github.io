@@ -46,7 +46,69 @@ $ npx vitepress init
 ![vitepress-demo-terminal](/vitepress-demo-terminal.png)
 
 ## 语法
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+### base
+- 类型：`string`
+- 默认值： `/`
+
+站点将部署到的 base URL。如果计划在子路径例如 GitHub 页面下部署站点，则需要设置此项。如果计划将站点部署到 `https://foo.github.io/bar/`，那么应该将 `base` 设置为 `'/bar/'`。它应该始终以 `/` 开头和结尾。
+
+base 会自动添加到其他选项中以 `/` 开头的所有 URL 前面，因此只需指定一次。
+
+```ts
+export default {
+  base: '/base/'
+}
+```
+
+### 项目根目录
+
+项目根目录是与 `.vitepress` 特殊目录同级的地方。`.vitepress` 目录是 VitePress 配置文件、开发服务器缓存、构建输出和可选主题自定义代码的预留位置。
+
+### 源目录
+
+源目录是 Markdown 源文件所在的位置。默认情况下，它与项目根目录相同。但是，可以通过 [`srcDir`](../reference/site-config#srcdir) 配置选项对其进行配置。
+
+`srcDir` 选项是相对于项目根目录解析的。例如，对于 `srcDir: 'src'`，文件结构将如下所示：
+
+```
+.                          # 项目根目录
+├─ .vitepress              # 配置目录
+└─ src                     # 源目录
+   ├─ getting-started.md
+   └─ index.md
+```
+
+生成的源代码到 HTML 的映射：
+
+```
+src/index.md            -->  /index.html (可以通过 / 访问)
+src/getting-started.md  -->  /getting-started.html
+```
+
+### srcDir
+- 类型：`string`
+- 默认值： `.`
+
+相对于项目根目录的 markdown 文件所在的文件夹。
+
+```ts
+export default {
+  srcDir: './src'
+}
+```
+
+### frontmatter 配置
+frontmatter 支持基于页面的配置。在每个 markdown 文件中，可以使用 frontmatter 配置来覆盖站点级别或主题级别的配置选项。此外，还有一些配置选项只能在 frontmatter 中定义。
+
+示例用法：
+```md
+---
+title: Docs with VitePress
+editLink: true
+---
+```
+
+> 详细：https://vitepress.dev/zh/reference/frontmatter-config
 
 ## 使用 GitHub Pages 部署
 1. 在项目的 `.github/workflows` 目录中创建一个名为 `deploy.yml` 的文件，其中包含这样的内容：
