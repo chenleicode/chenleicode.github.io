@@ -68,7 +68,7 @@ export default {
 
 ### 源目录
 
-源目录是 Markdown 源文件所在的位置。默认情况下，它与项目根目录相同。但是，可以通过 [`srcDir`](../reference/site-config#srcdir) 配置选项对其进行配置。
+源目录是 Markdown 源文件所在的位置。默认情况下，它与项目根目录相同。但是，可以通过 `srcDir` 配置选项对其进行配置。
 
 `srcDir` 选项是相对于项目根目录解析的。例如，对于 `srcDir: 'src'`，文件结构将如下所示：
 
