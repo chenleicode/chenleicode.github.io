@@ -1,4 +1,9 @@
 {
+  "name": "blog",
+  "version": "2.0.0",
+  "description": "Chen Lei's Blog",
+  "author": "Chen Lei",
+  "license": "MIT",
   "type": "module",
   "devDependencies": {
     "vitepress": "^1.2.3"
