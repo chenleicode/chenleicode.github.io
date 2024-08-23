@@ -46,6 +46,8 @@ $ npx vitepress init
 ![vitepress-demo-terminal](/vitepress-demo-terminal.png)
 
 ## 语法
+VitePress 的语法不算多，下面只介绍容易引起疑惑的几个语法点
+
 ### base
 - 类型：`string`
 - 默认值： `/`
@@ -101,6 +103,7 @@ export default {
 frontmatter 支持基于页面的配置。在每个 markdown 文件中，可以使用 frontmatter 配置来覆盖站点级别或主题级别的配置选项。此外，还有一些配置选项只能在 frontmatter 中定义。
 
 示例用法：
+
 ```md
 ---
 title: Docs with VitePress
@@ -109,6 +112,53 @@ editLink: true
 ```
 
 > 详细：https://vitepress.dev/zh/reference/frontmatter-config
+
+### 本地搜索
+得益于 [minisearch](https://github.com/lucaong/minisearch/)，VitePress 支持使用浏览器内索引进行模糊全文搜索。要启用此功能，只需在 `.vitepress/config.ts` 文件中将 `themeConfig.search.provider` 选项设置为 `'local'` 即可：
+
+```ts
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  themeConfig: {
+    search: {
+      provider: 'local'
+    }
+  }
+})
+```
+
+默认显示语言是英文，如果想要使用中文，请使用下面的写法：
+
+```ts
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  themeConfig: {
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: '搜索文档',
+            buttonAriaLabel: '搜索文档'
+          },
+          modal: {
+            noResultsText: '无法找到相关结果',
+            displayDetails: '显示详细列表',
+            resetButtonTitle: '清除查询条件',
+            footer: {
+              selectText: '选择',
+              navigateText: '切换',
+              closeText: '关闭'
+            }
+          }
+        }
+      }
+    }
+  }
+})
+```
 
 ## 使用 GitHub Pages 部署
 1. 在项目的 `.github/workflows` 目录中创建一个名为 `deploy.yml` 的文件，其中包含这样的内容：
