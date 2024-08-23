@@ -1,10 +1,20 @@
+# 第三季度技术分享
 今天分享的主题是使用 VitePress 搭建并自动化部署个人网站。
 
 ## VitePress 是什么
 [VitePress](https://vitepress.dev/zh/guide/what-is-vitepress) 是一个静态站点生成器 (SSG)，专为构建快速、以内容为中心的站点而设计。简而言之，VitePress 获取用 Markdown 编写的内容，对其应用主题，并生成可以轻松部署到任何地方的静态 HTML 页面。
 
-## 真实案例
-https://chenlei0608.github.io/blog/
+## 使用 VitePress 的网站
+- [Vue](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Rollup](https://rollupjs.org/)
+- [Pinia](https://pinia.vuejs.org/)
+- [VueUse](https://vueuse.org/)
+- [Vitest](https://vitest.dev/)
+- [D3](https://d3js.org/)
+- [UnoCSS](https://unocss.dev/)
+- [Element Plus](https://element-plus.org/zh-CN/)
+- https://chenlei0608.github.io/blog/
 
 ## 快速搭建一个 Demo
 ```bash
@@ -43,10 +53,18 @@ $ npx vitepress init
 │
 └  Done! Now run npm run docs:dev and start writing.
 ```
+
+::: details 终端示例截图
 ![vitepress-demo-terminal](/vitepress-demo-terminal.png)
+:::
+
+::: tip 注意事项
+- 默认生成的是 config.mjs 或 config.mts，如果要改成 config.js 或 config.ts，需要在 `package.json` 添加 `"type": "module"`
+- 默认构建输出目录是 `docs/.vitepress/dist`，如果 `问：Where should VitePress initialize the config?  答：./`, 构建输出目录是 `.vitepress/dist`
+:::
 
 ## 语法
-VitePress 的语法不算多，下面只介绍容易引起疑惑的几个语法点
+VitePress 的语法不算多，下面只介绍几个特别的语法点
 
 ### base
 - 类型：`string`
@@ -99,6 +117,150 @@ export default {
 }
 ```
 
+### Markdown 扩展
+VitePress 带有内置的 Markdown 扩展。
+
+#### 内部链接 {#internal-links}
+
+内部链接将转换为单页导航的路由链接。此外，子目录中包含的每个 `index.md` 都会自动转换为 `index.html`，并带有相应的 URL `/`。
+
+例如，给定以下目录结构：
+
+```
+.
+├─ index.md
+├─ foo
+│  ├─ index.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+   ├─ index.md
+   ├─ three.md
+   └─ four.md
+```
+
+假设现在处于 `foo/one.md` 文件中：
+
+```md
+[Home](/) <!-- 将用户导航至根目录下的 index.html -->
+[foo](/foo/) <!-- 将用户导航至目录 foo 下的 index.html -->
+[foo heading](./#heading) <!-- 将用户锚定到目录 foo 下的index文件中的一个标题上 -->
+[bar - three](../bar/three) <!-- 可以省略扩展名 -->
+[bar - three](../bar/three.md) <!-- 可以添加 .md -->
+[bar - four](../bar/four.html) <!-- 或者可以添加 .html -->
+```
+
+- [主页](/)
+- [关于我](../me)
+
+#### 外部链接 {#external-links}
+
+外部链接带有 `target="_blank" rel="noreferrer"`：
+
+- [vuejs.org](https://cn.vuejs.org)
+- [VitePress on GitHub](https://github.com/vuejs/vitepress)
+
+#### 自定义容器 {#custom-containers}
+
+自定义容器可以通过它们的类型、标题和内容来定义。
+
+##### 默认标题 {#default-title}
+
+**输入**
+
+```md
+::: info
+This is an info box.
+:::
+
+::: tip
+This is a tip.
+:::
+
+::: warning
+This is a warning.
+:::
+
+::: danger
+This is a dangerous warning.
+:::
+
+::: details
+This is a details block.
+:::
+```
+
+**输出**
+
+::: info
+This is an info box.
+:::
+
+::: tip
+This is a tip.
+:::
+
+::: warning
+This is a warning.
+:::
+
+::: danger
+This is a dangerous warning.
+:::
+
+::: details
+This is a details block.
+:::
+
+##### 自定义标题 {#custom-title}
+
+可以通过在容器的 "type" 之后附加文本来设置自定义标题。
+
+**输入**
+
+````md
+::: danger STOP
+危险区域，请勿继续
+:::
+
+::: details 点我查看代码
+```js
+console.log('Hello, VitePress!')
+```
+:::
+````
+
+**输出**
+
+::: danger STOP
+危险区域，请勿继续
+:::
+
+::: details 点我查看代码
+```js
+console.log('Hello, VitePress!')
+```
+:::
+
+此外，可以通过在站点配置中添加以下内容来全局设置自定义标题的内容
+
+```ts
+// config.ts
+export default defineConfig({
+  // ...
+  markdown: {
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
+    }
+  }
+  // ...
+})
+```
+
 ### frontmatter 配置
 frontmatter 支持基于页面的配置。在每个 markdown 文件中，可以使用 frontmatter 配置来覆盖站点级别或主题级别的配置选项。此外，还有一些配置选项只能在 frontmatter 中定义。
 
@@ -111,7 +273,9 @@ editLink: true
 ---
 ```
 
-> 详细：https://vitepress.dev/zh/reference/frontmatter-config
+::: info 详细内容
+https://vitepress.dev/zh/reference/frontmatter-config
+:::
 
 ### 本地搜索
 得益于 [minisearch](https://github.com/lucaong/minisearch/)，VitePress 支持使用浏览器内索引进行模糊全文搜索。要启用此功能，只需在 `.vitepress/config.ts` 文件中将 `themeConfig.search.provider` 选项设置为 `'local'` 即可：
@@ -228,11 +392,14 @@ jobs:
         uses: actions/deploy-pages@v4
 ```
 
-> [!NOTE]
-> - 如果你使用的是 Github Pages 并部署到 `https://user-name.github.io/repo-name/`，请将 base 设置为 `/repo-name/`
-> - 构建输出目录，如果按照上文的快速初始化的目录，是 `docs/.vitepress/dist`
+::: tip 注意事项
+- 如果你使用的是 Github Pages 并部署到 `https://user-name.github.io/repo-name/`，请将 base 设置为 `/repo-name/`
+:::
 
 2. 在存储库设置中的“Pages”菜单项下，选择“Build and deployment > Source > GitHub Actions”
+
+::: details 操作截图
 ![vitepress-demo-github-pages](/Snipaste_2024-08-07_16-24-24.png)
+:::
 
 3. 将更改推送到 `main` 分支并等待 GitHub Action 工作流完成。你应该看到站点部署到 `https://user-name.github.io/repo-name/`。你的站点将在每次推送到 `main` 分支时自动部署。

@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: "编程之旅",
-  description: "这是使用 VitePress 搭建的个人博客，主要是记录一些个人的学习笔记",
-  base: "/blog/",
+  title: '编程之旅',
+  description: '这是使用 VitePress 搭建的个人博客，主要是记录一些个人的学习笔记',
+  base: '/blog/',
   cleanUrls: true,
   srcDir: './src',
 
@@ -28,10 +28,16 @@ export default defineConfig({
             ]
           },
           {
+            text: '报错',
+            collapsed: false,
+            items: [
+              { text: 'pngquant failed to build, make sure that libpng-dev is installed', link: 'install-dependency-error' }
+            ]
+          },
+          {
             text: '其他',
             collapsed: false,
             items: [
-              { text: '安装依赖报错', link: 'install-dependency-error' },
               { text: '箭头函数-括号', link: 'arrow-function-bracket' },
               { text: '使用 VitePress + GitHub Pages 搭建网站', link: 'github-deploy' },
               { text: '必要的最佳实践', link: 'best-practice' },
@@ -92,9 +98,6 @@ export default defineConfig({
         timeStyle: 'medium'
       }
     },
-
-    // outline: [1, 3],
-    // outlineTitle: '页面导航',
 
     outline: {
       level: 'deep',
