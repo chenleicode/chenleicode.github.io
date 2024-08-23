@@ -1,10 +1,11 @@
 {
+  "type": "module",
   "devDependencies": {
     "vitepress": "^1.2.3"
   },
   "overrides": {
     "vitepress": {
-        "vite": "5.3.0-beta.1"
+      "vite": "5.3.0-beta.1"
     }
   },
   "scripts": {
