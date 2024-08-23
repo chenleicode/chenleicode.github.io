@@ -12,7 +12,7 @@ export default defineConfig({
       { text: '主页', link: '/' },
       { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
       { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' },
-      { text: '反馈', link: 'https://github.com/chenlei0608/blog/issues' }
+      { text: '反馈', link: '/feedback' }
     ],
 
     sidebar: {
