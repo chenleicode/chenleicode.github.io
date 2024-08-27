@@ -35,3 +35,11 @@ throw new Error("Required"); // 抛出一个新的错误对象
 ```
 
 在实践中，你抛出的异常应该始终是 Error 对象或 Error 子类的实例，例如 RangeError、TypeError。这是因为捕获错误的代码可能期望捕获的值具有一些属性，例如错误信息。
+
+## 时间顺序
+1. promise
+2. async, await
+
+## 不懂的知识点
+1. 回调地狱，是怎么执行的，为什么是那样执行
+2. 多个 .then 是依次执行的吗
