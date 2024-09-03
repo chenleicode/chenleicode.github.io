@@ -34,6 +34,10 @@ features:
     link: /frontend/share-quarter-3
     details: '分享主题：使用 VitePress 搭建并自动化部署网站'
     linkText: 查看详细内容
+  - title: Corepack
+    link: /frontend/corepack
+    details: 'Node 版本管理使用 nvm 等，对于包管理器 pnpm 的版本，可以尝试使用 corepack'
+    linkText: 查看详细内容
 ---
 
 
