@@ -1,3 +1,4 @@
+JavaScript 异步
 下面是学习 JavaScript 异步知识的笔记
 
 ## try...catch
