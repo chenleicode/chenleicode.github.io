@@ -23,8 +23,14 @@ export default defineConfig({
             text: 'Git',
             collapsed: false,
             items: [
-              { text: 'git submodule', link: 'git-submodule' },
-              { text: 'git commit', link: 'git-commit' }
+              { text: 'git submodule', link: 'git-submodule' }
+            ]
+          },
+          {
+            text: 'JavaScript',
+            collapsed: false,
+            items: [
+              { text: '箭头函数-括号', link: 'arrow-function-bracket' }
             ]
           },
           {
@@ -38,10 +44,8 @@ export default defineConfig({
             text: '其他',
             collapsed: false,
             items: [
-              { text: '箭头函数-括号', link: 'arrow-function-bracket' },
-              { text: '使用 VitePress + GitHub Pages 搭建网站', link: 'github-deploy' },
-              { text: '必要的最佳实践', link: 'best-practice' },
-              { text: '第三季度技术分享', link: 'share-quarter-3' }
+              { text: '第三季度技术分享', link: 'share-quarter-3' },
+              { text: 'corepack', link: 'corepack' }
             ]
           }
         ]
