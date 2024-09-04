@@ -49,7 +49,7 @@ pnpm install
 setx COREPACK_NPM_REGISTRY https://registry.npmmirror.com
 ```
 
-- Mac
+- MacOS/Linux
 
 在 `.zshrc` 或 `.bashrc` 末尾添加 `export COREPACK_NPM_REGISTRY=$(npm config get registry)`
 
