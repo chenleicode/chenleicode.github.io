@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "编程之旅"
-  text: "你好，这是我的非正式技术分享博客"
-  tagline: "有趣，实用，好玩"
+  text: "这是陈磊的个人博客，不求完美但求真诚"
+  tagline: "小小视角，大大世界，分享日常，精彩自现"
   actions:
     - theme: brand
       text: 现在开始
