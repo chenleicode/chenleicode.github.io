@@ -50,9 +50,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: '第三季度技术分享', link: 'share-quarter-3' },
-              { text: 'corepack', link: 'corepack' },
-              { text: 'js-async', link: 'js-async' },
-              { text: 'git-commit', link: 'git-commit' }
+              { text: 'corepack', link: 'corepack' }
             ]
           }
         ]
