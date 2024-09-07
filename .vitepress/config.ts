@@ -58,12 +58,7 @@ export default defineConfig({
       '/life-essay/': {
         base: '/life-essay/',
         items: [
-          {
-            text: '随笔',
-            items: [
-              { text: '《恶意》读后感', link: 'malice' }
-            ]
-          }
+          { text: '《恶意》读后感', link: 'malice' }
         ]
       }
     },
