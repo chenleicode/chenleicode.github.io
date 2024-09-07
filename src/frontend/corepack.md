@@ -4,9 +4,15 @@ Node 版本管理使用 nvm 等，如果想要管理包管理器 pnpm 的版本�
 ## 快速上手
 1. 启用 corepack，默认是禁用的，需要手动启用
 
-```bash
-corepack enable
-```
+    - 管理 yarn 和 pnpm
+    ```sh
+    corepack enable
+    ```
+
+    - 只管理 pnpm
+    ```sh
+    corepack enable pnpm
+    ```
 
 2. 打开一个 node 项目，项目需指定包管理器的版本
 
@@ -18,7 +24,7 @@ corepack enable
 
 3. 在项目文件目录下直接执行如下命令即可，若电脑上没有安装指定的 pnpm 版本，corepack 会为你安装此项目指定的版本
 
-```bash
+```sh
 pnpm install
 ```
 
@@ -44,8 +50,7 @@ pnpm install
 
 - Windows
 
-```bash
-# powershell
+```sh
 setx COREPACK_NPM_REGISTRY https://registry.npmmirror.com
 ```
 
@@ -54,5 +59,5 @@ setx COREPACK_NPM_REGISTRY https://registry.npmmirror.com
 在 `.zshrc` 或 `.bashrc` 末尾添加 `export COREPACK_NPM_REGISTRY=$(npm config get registry)`
 
 ::: info 注意
-我没有Mac，没有试过，此方法是在 GitHub 上寻找的
+我没有 Mac 和 Linux，没有试过，此方法是在 GitHub 上寻找的，应该有效
 :::

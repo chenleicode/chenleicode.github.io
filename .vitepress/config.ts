@@ -7,7 +7,12 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: './src',
 
+  head: [
+    ['link', { rel: 'icon', type: 'image', href: '/blog/site-logo-circle.png' }]
+  ],
+
   themeConfig: {
+    logo: { src: '/site-logo.jpg', width: 24, height: 24 },
     nav: [
       { text: '主页', link: '/' },
       { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
@@ -94,7 +99,7 @@ export default defineConfig({
       prev: '上一页',
       next: '下一页'
     },
-    
+
     lastUpdated: {
       text: '最后更新于',
       formatOptions: {
