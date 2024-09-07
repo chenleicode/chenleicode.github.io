@@ -46,7 +46,11 @@ features:
   --vp-home-hero-image-filter: blur(44px);
 }
 
-img {
+.VPHomeHero img {
+  border-radius: 50%;
+}
+
+.VPNavBarTitle img {
   border-radius: 50%;
 }
 
