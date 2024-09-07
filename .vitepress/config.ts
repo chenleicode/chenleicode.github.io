@@ -91,8 +91,8 @@ export default defineConfig({
     },
 
     footer: {
-      // message: '基于 MIT 许可发布',
-      copyright: '特别说明：主页暂时使用了 VitePress 的 Logo，如有侵权请联系我删除'
+      message: '基于 MIT 许可发布',
+      copyright: `版权所有 © ${new Date().getFullYear()} 陈磊`
     },
 
     docFooter: {
