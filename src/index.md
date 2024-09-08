@@ -19,7 +19,7 @@ hero:
 
 features:
   - title: pngquant failed to build, make sure that libpng-dev is installed
-    details: '安装依赖报错，这个报错有很多原因，我只介绍我出现的这个原因以及解决办法'
+    details: '安装依赖报错，原因很多，我只介绍我出现的这个原因以及解决办法'
     link: /frontend/install-dependency-error
     linkText: 查看详细内容
   - title: git submodule
