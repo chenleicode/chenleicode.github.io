@@ -99,9 +99,9 @@ guide/getting-started.md  -->  /guide/getting-started.html
 
 ```ts
 // config.ts
-export default {
+export default defineConfig({
   cleanUrls: true
-}
+})
 ```
 
 - 生成的 HTML 页面会是这样：
@@ -148,9 +148,9 @@ src/getting-started.md  -->  /getting-started.html
 相对于项目根目录的 markdown 文件所在的文件夹。
 
 ```ts
-export default {
+export default defineConfig({
   srcDir: './src'
-}
+})
 ```
 
 ### base
@@ -163,9 +163,9 @@ base 会自动添加到其他选项中以 `/` 开头的所有 URL 前面，因�
 
 ```ts
 // config.ts
-export default {
+export default defineConfig({
   base: '/base/'
-}
+})
 ```
 
 ### frontmatter 配置
@@ -408,8 +408,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
-      # - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
+          fetch-depth: 0 # 保留 Git 信息
+      # 使用 pnpm
+      # - name: Setup pnpm
+      #   uses: pnpm/action-setup@v3
+      #   with:
+      #     version: latest
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
