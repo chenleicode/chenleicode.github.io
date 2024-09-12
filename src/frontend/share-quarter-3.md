@@ -265,8 +265,8 @@ VitePress 带有内置的 Markdown 扩展，类似于 MDX
 ```
 
 - [主页](/)
-- [Corepack](../frontend/corepack)
-- [Corepack (遇到的问题)](../frontend/corepack/#遇到的问题)
+- [Corepack](./corepack)
+- [Corepack (遇到的问题)](./corepack#遇到的问题)
 
 #### 外部链接 {#external-links}
 
