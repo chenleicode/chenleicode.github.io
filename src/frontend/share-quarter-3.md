@@ -19,21 +19,22 @@
 - [D3](https://d3js.org/)
 - [UnoCSS](https://unocss.dev/)
 - [Element Plus](https://element-plus.org/zh-CN/)
+- [Husky](https://typicode.github.io/husky/zh/)
 - https://chenlei0608.github.io/blog/
 
 ## 快速搭建一个 Demo
 ```sh
 # 创建文件目录
-$ mkdir vitepress-demo
+mkdir vitepress-demo
 
 # 进入文件目录
-$ cd vitepress-demo
+cd vitepress-demo
 
 # 安装 vitepress
-$ npm add -D vitepress # 或 pnpm add -D vitepress
+npm add -D vitepress # 或 pnpm add -D vitepress
 
 # 初始化 vitepress
-$ npx vitepress init # 或 pnpm vitepress init
+npx vitepress init # 或 pnpm vitepress init
 
 # 回答几个简单的问题
 ┌  Welcome to VitePress!
@@ -116,7 +117,7 @@ guide/getting-started.md  -->  /guide/getting-started
 
 生成的 HTML 可以托管在任何支持静态文件的 Web 服务器上。
 
-### 项目根目录
+### 根目录
 
 项目根目录是与 `.vitepress` 特殊目录同级的地方。`.vitepress` 目录是 VitePress 配置文件、开发服务器缓存、构建输出和可选主题自定义代码的预留位置。
 
@@ -169,7 +170,7 @@ export default defineConfig({
 ```
 
 ### frontmatter 配置
-frontmatter 支持基于页面的配置。在每个 markdown 文件中，可以使用 frontmatter 配置来覆盖站点级别或主题级别的配置选项。此外，还有一些配置选项只能在 frontmatter 中定义。
+frontmatter 支持基于页面的配置。在每个 markdown 文件中，可以使用 frontmatter 配置来覆盖站点级别或主题级别的配置选项
 
 示例用法：
 
@@ -180,7 +181,7 @@ editLink: true
 ---
 ```
 
-::: info 详细内容
+::: info 详细文档
 https://vitepress.dev/zh/reference/frontmatter-config
 :::
 
@@ -395,9 +396,9 @@ permissions:
   id-token: write
 
 # 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
-# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+# 但是，不取消正在进行的运行，允许这些生产部署完成
 concurrency:
-  group: pages
+  group: pages # 自定义的组名
   cancel-in-progress: false
 
 jobs:
