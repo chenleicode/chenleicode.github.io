@@ -20,7 +20,9 @@
 - [UnoCSS](https://unocss.dev/)
 - [Element Plus](https://element-plus.org/zh-CN/)
 - [Husky](https://typicode.github.io/husky/zh/)
-- https://chenlei0608.github.io/blog/
+- [陈磊个人网站](https://chenlei0608.github.io/blog/)
+
+...
 
 ## 快速搭建一个 Demo
 ```sh
@@ -68,6 +70,7 @@ npx vitepress init # 或 pnpm vitepress init
 - 默认生成的是 config.mjs 或 config.mts，如果要改成 config.js 或 config.ts，需要在 `package.json` 添加 `"type": "module"`
 - 按照上述操作的构建输出目录是 `docs/.vitepress/dist`，如果 `问：Where should VitePress initialize the config?  答：./`, 构建输出目录是 `.vitepress/dist`
 - 默认情况下，VitePress 将其开发服务器缓存存储在 `.vitepress/cache` 中，如果使用 Git，应该将它们添加到 .gitignore 文件中
+- [演示 demo](https://chenlei0608.github.io/demo/)
 :::
 
 ## 语法
@@ -141,6 +144,12 @@ guide/getting-started.md  -->  /guide/getting-started
 src/index.md            -->  /index.html (可以通过 / 访问)
 src/getting-started.md  -->  /getting-started.html
 ```
+
+### 资源处理（public 目录）
+
+放置在 public 中的资源将按原样复制到输出目录的根目录中。
+
+请注意，应使用根绝对路径来引用放置在 public 中的文件——例如，`public/icon.png` 应始终在源代码中使用 `/icon.png` 引用。
 
 ### srcDir
 - 类型：`string`
@@ -233,7 +242,36 @@ export default defineConfig({
 ```
 
 ### Markdown 扩展
-VitePress 带有内置的 Markdown 扩展，类似于 MDX
+
+VitePress 带有内置的 Markdown 扩展，类似于 [MDX](https://www.mdxjs.cn/)
+
+#### 使用 Vue
+
+```md
+<script setup>
+import CustomComponent from '../../components/CustomComponent.vue'
+</script>
+
+# 简介
+
+这是在 Markdown 中使用 Vue SFC
+
+<CustomComponent />
+
+## 标题2
+
+xxxxxxxxxxxxxxxxxxxxxx
+
+## 标题3
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+```
+
+::: info 详细文档
+https://vitepress.dev/zh/guide/using-vue
+:::
+
 
 #### 内部链接 {#internal-links}
 

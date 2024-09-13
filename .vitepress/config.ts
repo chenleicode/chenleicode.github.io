@@ -49,8 +49,8 @@ export default defineConfig({
             text: '其他',
             collapsed: false,
             items: [
-              { text: '第三季度技术分享', link: 'share-quarter-3' },
-              { text: 'corepack', link: 'corepack' }
+              { text: 'corepack', link: 'corepack' },
+              { text: '第三季度技术分享', link: 'share-quarter-3' }
             ]
           }
         ]
