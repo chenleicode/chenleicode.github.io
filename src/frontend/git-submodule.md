@@ -3,6 +3,7 @@
 Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块。每个子模块都有自己的历史记录和版本控制，可以独立于主项目进行开发和维护。
 
 下面可能会涉及的名词含义：
+
 ```
 主仓库：包含子模块的代码仓库，比如 monorepo
 子模块仓库：单独的某个代码仓库，它可能被某个主仓库引用作为子模块，比如 monorepo-submodule-a
@@ -71,7 +72,21 @@ git submodule update --init --recursive
   git push
   ```
 
-## 5. 子模块的注意事项
+## 5. `.gitmodules` 文件
+
+`.gitmodules` 文件是 Git 仓库中用来管理子模块的配置文件。它通常位于项目的根目录中，记录了子模块的信息，包括子模块的路径和来源仓库。以下是 `.gitmodules` 文件的一个示例结构：
+
+```ini
+[submodule "apps/submodule-a"]
+	path = apps/submodule-a
+	url = git@github.com:chenlei0608/monorepo-submodule-a.git
+```
+
+- **submodule ""apps/submodule-a""**: 定义子模块的名称。
+- **path**: 指定子模块在主项目中的路径。
+- **url**: 指定子模块的远程仓库地址。
+
+## 6. 子模块的注意事项
 
 - **子模块是独立仓库**：子模块有自己的 `.git` 目录，因此操作它们时，应该像管理一个普通 Git 仓库那样处理。例如，子模块中的代码更改需要单独提交和推送。
   
