@@ -4,11 +4,9 @@ Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方
 
 下面可能会涉及的名词含义：
 
-```
-主仓库：包含子模块的代码仓库，比如 monorepo
-子模块仓库：单独的某个代码仓库，它可能被某个主仓库引用作为子模块，比如 monorepo-submodule-a
-子模块：指在主仓库被引用的外部代码仓库，比如 monorepo 的 apps/submodule-a
-```
+- 主仓库：包含子模块的代码仓库，比如 [monorepo](https://github.com/chenlei0608/monorepo)
+- 子模块仓库：单独的某个代码仓库，它可能被某个主仓库引用作为子模块，比如 [monorepo-submodule-a](https://github.com/chenlei0608/monorepo-submodule-a)
+- 子模块：指在主仓库被引用的外部代码仓库，比如 [monorepo](https://github.com/chenlei0608/monorepo) 的 apps/submodule-a
 
 ## 1. git submodule status
 
