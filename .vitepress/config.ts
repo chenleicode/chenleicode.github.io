@@ -50,7 +50,8 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'corepack', link: 'corepack' },
-              { text: '第三季度技术分享', link: 'share-quarter-3' }
+              { text: '第三季度技术分享', link: 'share-quarter-3' },
+              { text: 'Powershell 7', link: 'powershell7' }
             ]
           }
         ]
