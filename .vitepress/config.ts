@@ -14,8 +14,8 @@ export default defineConfig({
   themeConfig: {
     logo: { src: '/site-logo.jpg', width: 24, height: 24 },
     nav: [
-      { text: '主页', link: '/' },
       { text: '前端', link: '/frontend/git-submodule', activeMatch: '/frontend/' },
+      { text: '演讲', link: '/talk' },
       { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' },
       { text: '反馈', link: '/feedback' }
     ],
