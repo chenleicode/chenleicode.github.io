@@ -9,7 +9,7 @@ export default defineConfig({
   srcDir: './src',
 
   head: [
-    ['link', { rel: 'icon', type: 'image', href: '/blog/site-logo-circle.png' }]
+    ['link', { rel: 'icon', href: '/site-logo-circle.png' }]
   ],
 
   themeConfig: {
