@@ -38,7 +38,3 @@ PowerShell 是一种跨平台的任务自动化解决方案，由命令行 shell
 此时就可以快乐地使用自动补全功能了，使用 tab 键可以切换补全内容
 
 ![示例](/auto-complete.png)
-
-## test
-
-hhhhhhhhhhhhhh
