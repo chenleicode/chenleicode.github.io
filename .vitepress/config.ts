@@ -7,7 +7,7 @@ export default defineConfig({
   // base: '/',
   cleanUrls: true,
   srcDir: './src',
-  outDir: '.vitepress/dist',
+  // outDir: '.vitepress/dist',
 
   head: [
     ['link', { rel: 'icon', href: '/site-logo-circle.png' }]
