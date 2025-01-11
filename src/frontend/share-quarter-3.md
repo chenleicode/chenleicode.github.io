@@ -20,7 +20,7 @@
 - [UnoCSS](https://unocss.dev/)
 - [Element Plus](https://element-plus.org/zh-CN/)
 - [Husky](https://typicode.github.io/husky/zh/)
-- [陈磊个人网站](https://chenlei0608.github.io/blog/)
+- [陈磊个人网站](https://chenlei0608.github.io/chenlei0608.github.io/)
 
 ...
 
