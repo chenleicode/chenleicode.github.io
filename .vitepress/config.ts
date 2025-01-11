@@ -4,7 +4,7 @@ export default defineConfig({
   title: '编程之旅',
   description: '这是使用 VitePress 搭建的个人博客，主要是记录一些个人的学习笔记',
   lang: 'zh-CN',
-  // base: '/blog/',
+  base: '/',
   cleanUrls: true,
   srcDir: './src',
 
