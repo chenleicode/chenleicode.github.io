@@ -30,7 +30,8 @@ export default defineConfig({
             text: 'Git',
             collapsed: false,
             items: [
-              { text: 'git submodule', link: 'git-submodule' }
+              { text: 'git submodule', link: 'git-submodule' },
+              { text: 'git reset', link: 'git-reset' }
             ]
           },
           {
