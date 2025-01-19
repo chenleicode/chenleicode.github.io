@@ -20,7 +20,7 @@
 - [UnoCSS](https://unocss.dev/)
 - [Element Plus](https://element-plus.org/zh-CN/)
 - [Husky](https://typicode.github.io/husky/zh/)
-- [陈磊个人网站](https://chenlei0608.github.io/chenlei0608.github.io/)
+- [陈磊个人网站](https://chenleicode.top/)
 
 ...
 
@@ -70,7 +70,7 @@ npx vitepress init # 或 pnpm vitepress init
 - 默认生成的是 config.mjs 或 config.mts，如果要改成 config.js 或 config.ts，需要在 `package.json` 添加 `"type": "module"`
 - 按照上述操作的构建输出目录是 `docs/.vitepress/dist`，如果 `问：Where should VitePress initialize the config?  答：./`, 构建输出目录是 `.vitepress/dist`
 - 默认情况下，VitePress 将其开发服务器缓存存储在 `.vitepress/cache` 中，如果使用 Git，应该将它们添加到 .gitignore 文件中
-- [演示 demo](https://chenlei0608.github.io/demo/)
+- [演示 demo](https://chenleicode.top/demo/)
 :::
 
 ## 语法
