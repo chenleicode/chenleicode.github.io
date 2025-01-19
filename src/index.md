@@ -20,21 +20,21 @@ hero:
 features:
   - title: pngquant failed to build, make sure that libpng-dev is installed
     details: '安装依赖报错，原因很多，我只介绍我出现的这个原因以及解决办法'
-    link: /frontend/install-dependency-error
+    link: /posts/install-dependency-error
     linkText: 查看详细内容
 
   - title: git submodule
     details: 'Git 子模块是一种将外部 Git 仓库嵌入到另一个 Git 仓库中的方法。它允许你将一个项目分解为多个独立的仓库，并在主项目中引用这些子模块'
-    link: /frontend/git-submodule
+    link: /posts/git-submodule
     linkText: 查看详细内容
 
   - title: Corepack
-    link: /frontend/corepack
+    link: /posts/corepack
     details: 'Node 版本管理使用 nvm 等，对于包管理器 pnpm 的版本，可以尝试使用 corepack'
     linkText: 查看详细内容
 
   - title: 第三季度技术分享
-    link: /frontend/share-quarter-3
+    link: /posts/share-quarter-3
     details: '分享主题：使用 VitePress 搭建并自动化部署网站'
     linkText: 查看详细内容
 ---
