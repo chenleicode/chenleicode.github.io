@@ -120,7 +120,7 @@ export default defineConfig({
     darkModeSwitchTitle: '切换到深色模式',
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/chenlei0608' }
+      { icon: 'github', link: 'https://github.com/chenleicode' }
     ]
   }
 })
