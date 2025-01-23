@@ -34,7 +34,7 @@ features:
     linkText: 查看详细内容
 
   - title: 第三季度技术分享
-    link: /posts/share-quarter-3
+    link: /posts/vitepress-build-deploy
     details: '分享主题：使用 VitePress 搭建并自动化部署网站'
     linkText: 查看详细内容
 ---

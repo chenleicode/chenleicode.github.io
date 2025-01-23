@@ -18,8 +18,7 @@ export default defineConfig({
     nav: [
       { text: '博客', link: '/posts/git-submodule', activeMatch: '/posts/' },
       { text: '演讲', link: '/talk' },
-      { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' },
-      { text: '反馈', link: '/feedback' }
+      { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' }
     ],
 
     sidebar: {
@@ -53,7 +52,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'corepack', link: 'corepack' },
-              { text: '第三季度技术分享', link: 'share-quarter-3' },
+              { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
               { text: 'Powershell 7', link: 'powershell7' },
               { text: 'console.log()', link: 'console-log' }
             ]
