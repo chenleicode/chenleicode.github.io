@@ -91,7 +91,7 @@ export default defineConfig({
 
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: `版权所有 © ${new Date().getFullYear()} 陈磊`
+      copyright: `版权所有 © 2024 - ${new Date().getFullYear()} 陈磊`
     },
 
     docFooter: {
