@@ -30,7 +30,8 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'git submodule', link: 'git-submodule' },
-              { text: 'git reset', link: 'git-reset' }
+              { text: 'git reset', link: 'git-reset' },
+              { text: '撤销合并操作', link: 'undo-merge' }
             ]
           },
           {
