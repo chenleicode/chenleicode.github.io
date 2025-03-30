@@ -16,7 +16,7 @@ export default defineConfig({
   themeConfig: {
     logo: { src: '/site-logo.jpg', width: 24, height: 24 },
     nav: [
-      { text: '博客', link: '/posts/git-command', activeMatch: '/posts/' },
+      { text: '博客', link: '/posts/delete-local-branch', activeMatch: '/posts/' },
       { text: '演讲', link: '/talk' },
       { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' }
     ],
@@ -29,7 +29,7 @@ export default defineConfig({
             text: 'Git',
             collapsed: false,
             items: [
-              { text: '实用 Git 命令', link: 'git-command' },
+              { text: '删除本地分支', link: 'delete-local-branch' },
               { text: 'git submodule', link: 'git-submodule' },
               { text: 'git reset', link: 'git-reset' },
               { text: '撤销合并操作', link: 'undo-merge' }
