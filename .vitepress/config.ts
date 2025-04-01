@@ -18,7 +18,8 @@ export default defineConfig({
     nav: [
       { text: '博客', link: '/posts/delete-local-branch', activeMatch: '/posts/' },
       { text: '演讲', link: '/talk' },
-      { text: '随笔', link: '/life-essay/malice', activeMatch: '/life-essay/' }
+      { text: '关于我', link: '/me' },
+      { text: '关于此站点', link: '/what-is-site'}
     ],
 
     sidebar: {
@@ -39,7 +40,8 @@ export default defineConfig({
             text: 'JavaScript',
             collapsed: false,
             items: [
-              { text: '箭头函数-括号', link: 'arrow-function-bracket' }
+              { text: '箭头函数-括号', link: 'arrow-function-bracket' },
+              { text: 'console.log()', link: 'console-log' }
             ]
           },
           {
@@ -50,21 +52,21 @@ export default defineConfig({
             ]
           },
           {
+            text: '生活随笔',
+            collapsed: false,
+            items: [
+              { text: '《恶意》读后感', link: 'malice' }
+            ]
+          },
+          {
             text: '其他',
             collapsed: false,
             items: [
               { text: 'corepack', link: 'corepack' },
               { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
-              { text: 'Powershell 7', link: 'powershell7' },
-              { text: 'console.log()', link: 'console-log' }
+              { text: 'Powershell 7', link: 'powershell7' }
             ]
           }
-        ]
-      },
-      '/life-essay/': {
-        base: '/life-essay/',
-        items: [
-          { text: '《恶意》读后感', link: 'malice' }
         ]
       }
     },

@@ -7,8 +7,8 @@ hero:
   tagline: "小小视角，大大世界，记录日常"
   actions:
     - theme: brand
-      text: 站点初衷
-      link: /what-is-site
+      text: 开始阅读
+      link: /posts/delete-local-branch
     - theme: alt
       text: 关于我
       link: '/me'
