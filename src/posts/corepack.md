@@ -1,5 +1,5 @@
 # corepack
-Node 版本管理使用 nvm 等，如果想要管理包管理器 pnpm 的版本，可以尝试使用 corepack，在团队中统一包管理器的版本也很重要，简单介绍一下 corepack 的使用指南，仅供参考
+Node 版本管理使用 nvm, fnm 等，那如果想要管理包管理器 pnpm 的版本，可以尝试使用 corepack，在团队中统一包管理器的版本也很重要，下面简单介绍一下 corepack 的使用指南。
 
 ## 快速上手
 1. 启用 corepack，默认是禁用的，需要手动启用
@@ -22,7 +22,7 @@ Node 版本管理使用 nvm 等，如果想要管理包管理器 pnpm 的版本�
 }
 ```
 
-3. 在项目文件目录下直接执行如下命令即可，若电脑上没有安装指定的 pnpm 版本，corepack 会为你安装此项目指定的版本
+3. 在项目文件目录下直接执行如下安装依赖命令即可，若电脑上没有安装指定的 pnpm 版本，corepack 会先为你安装此项目指定的 pnpm 版本，然后再安装依赖。
 
 ```sh
 pnpm install
@@ -43,9 +43,9 @@ pnpm install
 ![pnpm-install-error](/pnpm-install-error.png)
 
 ### 出现原因
-国内网络访问不了默认npm镜像（https://registry.npmjs.org），即使开启科学上网也是访问不了（暂时不知道为什么）
+国内网络访问不了默认npm镜像（https://registry.npmjs.org）
 
-### 解决办法
+### 解决办法1
 使用阿里的 npm 镜像（https://registry.npmmirror.com），如果仅仅在 `.npmrc` 中设置了阿里镜像，没有效果，corepack 仍然使用的是默认镜像，需要额外设置 `COREPACK_NPM_REGISTRY` 的值
 
 - Windows
@@ -54,10 +54,11 @@ pnpm install
 setx COREPACK_NPM_REGISTRY https://registry.npmmirror.com
 ```
 
-- MacOS/Linux
+- macOS/Linux
 
 在 `.zshrc` 或 `.bashrc` 末尾添加 `export COREPACK_NPM_REGISTRY=$(npm config get registry)`
 
-::: info 注意
-我没有 Mac 和 Linux，没有试过，此方法是在 GitHub 上寻找的，应该有效
-:::
+### 解决办法2
+
+1. 使用梯子
+2. 开启代理软件的 tun 模式（在系统代理模式下，终端不走代理节点流量）
