@@ -18,9 +18,9 @@ hero:
     alt: VitePress
 
 features:
-  - title: pngquant failed to build, make sure that libpng-dev is installed
-    details: '安装依赖报错，原因很多，我只介绍我出现的这个原因以及解决办法'
-    link: /posts/install-dependency-error
+  - title: GitHub 推送失败网络连接
+    details: '简单来说，出现此问题的原因是 22 端口被禁了，需要切换到 443 端口'
+    link: /posts/github-connect
     linkText: 查看详细内容
 
   - title: git submodule
