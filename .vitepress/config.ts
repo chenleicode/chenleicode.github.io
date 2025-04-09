@@ -45,6 +45,13 @@ export default defineConfig({
             ]
           },
           {
+            text: 'CSS',
+            collapsed: false,
+            items: [
+              { text: '伪元素', link: 'css-pseudo-element' }
+            ]
+          },
+          {
             text: '报错',
             collapsed: false,
             items: [
