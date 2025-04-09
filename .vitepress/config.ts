@@ -48,6 +48,7 @@ export default defineConfig({
             text: 'CSS',
             collapsed: false,
             items: [
+              { text: '伪类', link: 'css-pseudo-class' },
               { text: '伪元素', link: 'css-pseudo-element' }
             ]
           },

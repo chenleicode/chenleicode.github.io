@@ -2,6 +2,14 @@
 
 选中元素的一些特殊位置
 
+## 基本语法
+
+```css
+selector:pseudo-element {
+  property: value;
+}
+```
+
 ## 常用伪元素
 
 ### ::before 和 ::after
