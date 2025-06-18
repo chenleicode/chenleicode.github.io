@@ -73,7 +73,8 @@ export default defineConfig({
               { text: 'corepack', link: 'corepack' },
               { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
               { text: 'Powershell 7', link: 'powershell7' },
-              { text: 'GitHub 推送失败网络连接', link: 'github-connect' }
+              { text: 'GitHub 推送失败网络连接', link: 'github-connect' },
+              { text: 'Mac 初体验', link: 'first-use-mac' }
             ]
           }
         ]
