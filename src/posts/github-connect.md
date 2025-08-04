@@ -1,3 +1,8 @@
+---
+footer: false
+sidebar: false
+---
+
 # GitHub 推送失败网络连接问题
 
 最近换了电脑，果然又出现此网络问题了。

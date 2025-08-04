@@ -1,3 +1,8 @@
+---
+footer: false
+sidebar: false
+---
+
 # Mac 初体验
 
 第一次购买使用 Mac，简单记录一下。
