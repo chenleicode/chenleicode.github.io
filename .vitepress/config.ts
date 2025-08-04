@@ -1,13 +1,11 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: '编程之旅',
-  description: '这是使用 VitePress 搭建的个人博客，主要是记录一些个人的学习笔记',
+  title: '陈磊',
+  description: '陈磊的个人网站',
   lang: 'zh-CN',
-  // base: '/',
   cleanUrls: true,
   srcDir: './src',
-  // outDir: '.vitepress/dist',
 
   head: [
     ['link', { rel: 'icon', href: '/site-logo-circle.png' }]
@@ -16,15 +14,16 @@ export default defineConfig({
   themeConfig: {
     logo: { src: '/site-logo.jpg', width: 24, height: 24 },
     nav: [
-      { text: '博客', link: '/posts/delete-local-branch', activeMatch: '/posts/' },
-      { text: '演讲', link: '/talk' },
+      { text: '博客', link: '/posts', activeMatch: '/posts/' },
+      { text: '演讲', link: '/talks' },
+      { text: '笔记', link: '/notes/delete-local-branch', activeMatch: '/notes/' },
       { text: '关于我', link: '/me' },
-      { text: '关于此站点', link: '/what-is-site'}
+      { text: '关于此网站', link: '/site'}
     ],
 
     sidebar: {
-      '/posts/': {
-        base: '/posts/',
+      '/notes/': {
+        base: '/notes/',
         items: [
           {
             text: 'Git',
@@ -53,27 +52,25 @@ export default defineConfig({
             ]
           },
           {
-            text: '报错',
-            collapsed: false,
-            items: [
-              { text: 'pngquant failed to build, make sure that libpng-dev is installed', link: 'install-dependency-error' }
-            ]
-          },
-          {
-            text: '生活随笔',
-            collapsed: false,
-            items: [
-              { text: '《恶意》读后感', link: 'malice' }
-            ]
-          },
-          {
             text: '其他',
             collapsed: false,
             items: [
               { text: 'corepack', link: 'corepack' },
-              { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
-              { text: 'Powershell 7', link: 'powershell7' },
+            ]
+          }
+        ]
+      },
+      '/posts/': {
+        base: '/posts/',
+        items: [
+          {
+            text: '博客',
+            collapsed: false,
+            items: [
               { text: 'GitHub 推送失败网络连接', link: 'github-connect' },
+              { text: '安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed', link: 'install-dependency-error' },
+              { text: '《恶意》读后感', link: 'malice' },
+              { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
               { text: 'Mac 初体验', link: 'first-use-mac' }
             ]
           }
@@ -103,23 +100,23 @@ export default defineConfig({
       }
     },
 
-    footer: {
-      message: '基于 MIT 许可发布',
-      copyright: `版权所有 © 2024 - ${new Date().getFullYear()} 陈磊`
-    },
+    // footer: {
+    //   message: '基于 MIT 许可发布',
+    //   copyright: `版权所有 © 2024 - ${new Date().getFullYear()} 陈磊`
+    // },
 
     docFooter: {
       prev: '上一页',
       next: '下一页'
     },
 
-    lastUpdated: {
-      text: '最后更新于',
-      formatOptions: {
-        dateStyle: 'short',
-        timeStyle: 'medium'
-      }
-    },
+    // lastUpdated: {
+    //   text: '最后更新于',
+    //   formatOptions: {
+    //     dateStyle: 'short',
+    //     timeStyle: 'medium'
+    //   }
+    // },
 
     outline: {
       level: 'deep',

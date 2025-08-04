@@ -1,3 +1,8 @@
+---
+footer: false
+sidebar: false
+---
+
 # 《恶意》读后感
 
 又一次强迫自己读书……

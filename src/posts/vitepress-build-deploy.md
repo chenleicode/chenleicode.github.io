@@ -1,3 +1,8 @@
+---
+footer: false
+sidebar: false
+---
+
 # 使用 VitePress 搭建并自动化部署个人网站
 
 今天分享的主题是使用 VitePress 搭建并自动化部署个人网站。

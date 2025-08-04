@@ -1,3 +1,8 @@
+---
+footer: false
+sidebar: false
+---
+
 # 安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed
 
 这个报错有很多原因，我只介绍我的报错原因以及解决办法。
