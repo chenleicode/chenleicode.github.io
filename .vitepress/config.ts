@@ -17,8 +17,7 @@ export default defineConfig({
       { text: '博客', link: '/posts', activeMatch: '/posts/' },
       { text: '演讲', link: '/talks' },
       { text: '笔记', link: '/notes/delete-local-branch', activeMatch: '/notes/' },
-      { text: '关于我', link: '/me' },
-      { text: '关于此网站', link: '/site'}
+      { text: '关于我', link: '/me' }
     ],
 
     sidebar: {
@@ -56,6 +55,7 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'corepack', link: 'corepack' },
+              { text: '刷新 DNS 缓存', link: 'refresh-dns-cache' }
             ]
           }
         ]
