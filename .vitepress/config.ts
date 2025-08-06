@@ -8,11 +8,11 @@ export default defineConfig({
   srcDir: './src',
 
   head: [
-    ['link', { rel: 'icon', href: '/site-logo-circle.png' }]
+    ['link', { rel: 'icon', href: '/avatar.jpg' }]
   ],
 
   themeConfig: {
-    logo: { src: '/site-logo.jpg', width: 24, height: 24 },
+    logo: { src: '/avatar.jpg', width: 24, height: 24 },
     nav: [
       { text: '博客', link: '/posts', activeMatch: '/posts/' },
       { text: '演讲', link: '/talks' },
