@@ -6,7 +6,7 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "vitepress": "2.0.0-alpha.7"
+    "vitepress": "2.0.0-alpha.15"
   },
   "scripts": {
     "dev": "vitepress dev --host",
