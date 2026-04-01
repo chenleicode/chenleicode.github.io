@@ -1,4 +1,6 @@
 ---
+title: Mac 初体验
+date: '2025-06-18'
 footer: false
 sidebar: false
 ---

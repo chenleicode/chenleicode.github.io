@@ -1,4 +1,6 @@
 ---
+title: 使用 VitePress 搭建并自动化部署个人网站
+date: '2024-09-13'
 footer: false
 sidebar: false
 ---

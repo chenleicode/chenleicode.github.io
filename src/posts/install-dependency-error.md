@@ -1,4 +1,6 @@
 ---
+title: 安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed
+date: '2024-07-03'
 footer: false
 sidebar: false
 ---

@@ -1,4 +1,6 @@
 ---
+title: 《恶意》读后感
+date: '2024-08-19'
 footer: false
 sidebar: false
 ---

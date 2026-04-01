@@ -6,6 +6,34 @@ export default defineConfig({
   lang: 'zh-CN',
   cleanUrls: true,
   srcDir: './src',
+  markdown: {
+    config(md) {
+      md.core.ruler.after('block', 'inject-post-date', (state) => {
+        const relativePath = state.env.relativePath ?? ''
+
+        if (!relativePath.startsWith('posts/')) {
+          return
+        }
+
+        const headingCloseIndex = state.tokens.findIndex(
+          (token, index) =>
+            token.type === 'heading_close' &&
+            token.tag === 'h1' &&
+            index > 0 &&
+            state.tokens[index - 1]?.type === 'inline'
+        )
+
+        if (headingCloseIndex === -1) {
+          return
+        }
+
+        const postDateToken = new state.Token('html_block', '', 0)
+        postDateToken.content = '<PostDate />\n'
+
+        state.tokens.splice(headingCloseIndex + 1, 0, postDateToken)
+      })
+    }
+  },
 
   head: [
     ['link', { rel: 'icon', href: '/avatar.jpg' }]
@@ -15,7 +43,7 @@ export default defineConfig({
     logo: { src: '/avatar.jpg', width: 24, height: 24 },
     nav: [
       { text: '博客', link: '/posts', activeMatch: '/posts/' },
-      { text: '演讲', link: '/talks' },
+      // { text: '演讲', link: '/talks' },
       { text: '笔记', link: '/notes/delete-local-branch', activeMatch: '/notes/' },
       { text: '关于我', link: '/me' }
     ],
@@ -106,8 +134,8 @@ export default defineConfig({
     // },
 
     docFooter: {
-      prev: '上一页',
-      next: '下一页'
+      prev: false,
+      next: false
     },
 
     // lastUpdated: {

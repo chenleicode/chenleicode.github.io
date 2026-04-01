@@ -17,21 +17,6 @@
         </div>
       </div>
     </div>
-
-    <div class="nav-buttons" :class="{ 'visible': showButtons }">
-      <a href="/posts" class="nav-btn">
-        <span class="btn-icon">📝</span>
-        <span class="btn-text">博客</span>
-      </a>
-      <a href="/talks" class="nav-btn">
-        <span class="btn-icon">🎤</span>
-        <span class="btn-text">演讲</span>
-      </a>
-      <a href="/me" class="nav-btn">
-        <span class="btn-icon">👤</span>
-        <span class="btn-text">关于我</span>
-      </a>
-    </div>
   </div>
 </template>
 
@@ -63,6 +48,61 @@ const movieQuotes = [
     text: "昨天已成为历史，明天是未知的，而今天是上天赐予我们的礼物",
     movie: "功夫熊猫",
     year: "2008"
+  },
+  {
+    text: "我会回来的",
+    movie: "终结者",
+    year: "1984"
+  },
+  {
+    text: "休斯敦，我们有麻烦了",
+    movie: "阿波罗13号",
+    year: "1995"
+  },
+  {
+    text: "为什么这么严肃",
+    movie: "蝙蝠侠：黑暗骑士",
+    year: "2008"
+  },
+  {
+    text: "你在跟我说话吗",
+    movie: "出租车司机",
+    year: "1976"
+  },
+  {
+    text: "你不能承受真相",
+    movie: "义海雄风",
+    year: "1992"
+  },
+  {
+    text: "生活得快一点，否则生活就会从你身边溜走",
+    movie: "春风化雨",
+    year: "1989"
+  },
+  {
+    text: "继续游下去",
+    movie: "海底总动员",
+    year: "2003"
+  },
+  {
+    text: "总有一天，明天会来的",
+    movie: "乱世佳人",
+    year: "1939"
+  },
+  {
+    text: "你有梦想，就得去捍卫它",
+    movie: "当幸福来敲门",
+    year: "2006"
+  },
+  {
+    text: "伟大的人不是生来伟大，而是在成长过程中展露伟大",
+    movie: "教父",
+    year: "1972"
+  },
+  {
+    text: "我们都要努力活着，努力去爱，努力被爱",
+    movie: "天堂电影院",
+    year: "1988"
   }
 ]
 
@@ -70,7 +110,6 @@ const currentQuote = ref(movieQuotes[0])
 const typewriterText = ref(null)
 const isTyping = ref(false)
 const showSource = ref(false)
-const showButtons = ref(false)
 
 const changeQuote = () => {
   const randomIndex = Math.floor(Math.random() * movieQuotes.length)
@@ -83,7 +122,6 @@ const startTypewriter = async () => {
 
   isTyping.value = true
   showSource.value = false
-  showButtons.value = false
   typewriterText.value.textContent = ''
 
   const text = `"${currentQuote.value.text}"`
@@ -100,11 +138,6 @@ const startTypewriter = async () => {
   setTimeout(() => {
     showSource.value = true
   }, 500)
-
-  // 来源显示后再显示按钮
-  setTimeout(() => {
-    showButtons.value = true
-  }, 1000)
 }
 
 onMounted(() => {
@@ -212,62 +245,6 @@ onMounted(() => {
   transform: translateY(0);
 }
 
-.nav-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(20px);
-  opacity: 0;
-  transition: all 0.8s ease;
-  z-index: 10;
-}
-
-.nav-buttons.visible {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-.nav-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-  text-decoration: none;
-  color: var(--vp-c-text-1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-  min-width: 80px;
-}
-
-.nav-btn:hover {
-  background: var(--vp-c-brand);
-  color: var(--vp-c-white);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  border-color: var(--vp-c-brand);
-}
-
-.btn-icon {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  transition: transform 0.3s ease;
-}
-
-.nav-btn:hover .btn-icon {
-  transform: scale(1.2);
-}
-
-.btn-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -294,16 +271,6 @@ onMounted(() => {
     font-size: 1.5rem;
     line-height: 1.6;
   }
-
-  .nav-buttons {
-    gap: 1rem;
-    bottom: 1.5rem;
-  }
-
-  .nav-btn {
-    padding: 0.8rem 1.2rem;
-    min-width: 70px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -323,32 +290,6 @@ onMounted(() => {
   .quote-source {
     font-size: 1rem;
   }
-
-  .nav-buttons {
-    flex-direction: row;
-    gap: 0.6rem;
-    align-items: center;
-    bottom: 1rem;
-  }
-
-  .nav-btn {
-    flex-direction: row;
-    gap: 0.5rem;
-    width: auto;
-    min-width: auto;
-    padding: 0.6rem 0.8rem;
-    justify-content: center;
-    white-space: nowrap;
-  }
-
-  .btn-icon {
-    margin-bottom: 0;
-    font-size: 1.2rem;
-  }
-
-  .btn-text {
-    font-size: 0.8rem;
-  }
 }
 
 /* 深色模式特殊处理 */
@@ -356,16 +297,6 @@ html.dark .custom-home {
   background-image:
     radial-gradient(circle at 25% 25%, var(--vp-c-brand-dimm) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, var(--vp-c-brand-dimm) 0%, transparent 50%);
-}
-
-html.dark .nav-btn {
-  background: transparent;
-  border-color: transparent;
-}
-
-html.dark .nav-btn:hover {
-  background: var(--vp-c-brand);
-  border-color: var(--vp-c-brand);
 }
 
 /* 确保兼容 VitePress 主题变量 */
