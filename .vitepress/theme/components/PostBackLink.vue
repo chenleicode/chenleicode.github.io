@@ -4,7 +4,9 @@ import { useData, withBase } from 'vitepress'
 
 const { page } = useData()
 
-const isPostPage = computed(() => page.value.relativePath.startsWith('posts/'))
+const isPostPage = computed(
+  () => page.value.relativePath.startsWith('posts/') && page.value.relativePath !== 'posts/index.md'
+)
 </script>
 
 <template>

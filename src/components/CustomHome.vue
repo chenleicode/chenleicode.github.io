@@ -10,7 +10,7 @@
                 <span class="cursor" :class="{ 'blinking': isTyping }">|</span>
               </p>
               <footer class="quote-source" :class="{ 'visible': showSource }">
-                —— {{ currentQuote.movie }} ({{ currentQuote.year }})
+                —— {{ currentQuote.movie }}
               </footer>
             </div>
           </div>
@@ -25,84 +25,24 @@ import { ref, onMounted } from 'vue'
 
 const movieQuotes = [
   {
-    text: "生活就像一盒巧克力，你永远不知道下一颗是什么味道",
+    text: "生活就像一盒巧克力，你永远不知道下一颗是什么味道。",
     movie: "阿甘正传",
-    year: "1994"
   },
   {
-    text: "希望是个好东西，也许是最好的，好东西是不会消亡的",
+    text: "希望是个好东西，也许是最好的，好东西是不会消亡的。",
     movie: "肖申克的救赎",
-    year: "1994"
   },
   {
-    text: "做人如果没有梦想，那和咸鱼有什么分别",
-    movie: "少林足球",
-    year: "2001"
-  },
-  {
-    text: "每个人都会死去，但不是每个人都曾经真正活过",
-    movie: "勇敢的心",
-    year: "1995"
-  },
-  {
-    text: "昨天已成为历史，明天是未知的，而今天是上天赐予我们的礼物",
-    movie: "功夫熊猫",
-    year: "2008"
-  },
-  {
-    text: "我会回来的",
-    movie: "终结者",
-    year: "1984"
-  },
-  {
-    text: "休斯敦，我们有麻烦了",
-    movie: "阿波罗13号",
-    year: "1995"
-  },
-  {
-    text: "为什么这么严肃",
-    movie: "蝙蝠侠：黑暗骑士",
-    year: "2008"
-  },
-  {
-    text: "你在跟我说话吗",
-    movie: "出租车司机",
-    year: "1976"
-  },
-  {
-    text: "你不能承受真相",
-    movie: "义海雄风",
-    year: "1992"
-  },
-  {
-    text: "生活得快一点，否则生活就会从你身边溜走",
-    movie: "春风化雨",
-    year: "1989"
-  },
-  {
-    text: "继续游下去",
-    movie: "海底总动员",
-    year: "2003"
-  },
-  {
-    text: "总有一天，明天会来的",
+    text: "总有一天，明天会来的。",
     movie: "乱世佳人",
-    year: "1939"
   },
   {
-    text: "你有梦想，就得去捍卫它",
-    movie: "当幸福来敲门",
-    year: "2006"
-  },
-  {
-    text: "伟大的人不是生来伟大，而是在成长过程中展露伟大",
+    text: "伟大的人不是生来伟大，而是在成长过程中展露伟大。",
     movie: "教父",
-    year: "1972"
   },
   {
-    text: "我们都要努力活着，努力去爱，努力被爱",
+    text: "我们都要努力活着，努力去爱，努力被爱。",
     movie: "天堂电影院",
-    year: "1988"
   }
 ]
 
@@ -124,7 +64,7 @@ const startTypewriter = async () => {
   showSource.value = false
   typewriterText.value.textContent = ''
 
-  const text = `"${currentQuote.value.text}"`
+  const text = currentQuote.value.text
   const speed = 120 // 打字速度（毫秒）
 
   for (let i = 0; i < text.length; i++) {
@@ -165,7 +105,7 @@ onMounted(() => {
   justify-content: center;
   position: relative;
   padding: 2rem;
-  padding-top: 20vh;
+  padding-top: 25vh;
 }
 
 .content-wrapper {

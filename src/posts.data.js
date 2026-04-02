@@ -32,6 +32,7 @@ function parsePostDate(value, url) {
 export default createContentLoader('posts/*.md', {
   transform(rawPosts) {
     return rawPosts
+      .filter(({ url }) => url !== '/posts/' && url !== '/posts')
       .map(({ url, frontmatter }) => {
         const { title, date } = frontmatter
 
