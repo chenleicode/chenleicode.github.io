@@ -20,10 +20,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const movieQuotes = [
+interface MovieQuote {
+  text: string
+  movie: string
+}
+
+const movieQuotes: MovieQuote[] = [
   {
     text: "生活就像一盒巧克力，你永远不知道下一颗是什么味道。",
     movie: "阿甘正传",
@@ -46,10 +51,10 @@ const movieQuotes = [
   }
 ]
 
-const currentQuote = ref(movieQuotes[0])
-const typewriterText = ref(null)
-const isTyping = ref(false)
-const showSource = ref(false)
+const currentQuote = ref<MovieQuote>(movieQuotes[0])
+const typewriterText = ref<HTMLSpanElement | null>(null)
+const isTyping = ref<boolean>(false)
+const showSource = ref<boolean>(false)
 
 const changeQuote = () => {
   const randomIndex = Math.floor(Math.random() * movieQuotes.length)

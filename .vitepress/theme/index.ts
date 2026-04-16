@@ -7,7 +7,6 @@ import PostDate from './components/PostDate.vue'
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
-    DefaultTheme.enhanceApp?.({ app })
     app.component('PostDate', PostDate)
   },
   Layout() {

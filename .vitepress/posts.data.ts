@@ -1,6 +1,24 @@
 import { createContentLoader } from 'vitepress'
 
-function parsePostDate(value, url) {
+export interface Post {
+  title: string
+  url: string
+  relativePath: string
+  date: string
+  year: string
+  sortKey: number
+}
+
+declare const data: Post[]
+export { data }
+
+interface ParsedDate {
+  year: string
+  sortKey: number
+  display: string
+}
+
+function parsePostDate(value: unknown, url: string): ParsedDate {
   if (typeof value !== 'string') {
     throw new Error(`Post "${url}" is missing a valid string date in frontmatter.`)
   }

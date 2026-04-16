@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue'
 import { useData } from 'vitepress'
-import { data as posts } from '../../../src/posts.data.js'
+import { data as posts } from '../../posts.data'
 
 const { page } = useData()
 
