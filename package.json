@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
+    "feed": "^5.2.0",
     "vitepress": "2.0.0-alpha.15"
   },
   "scripts": {
