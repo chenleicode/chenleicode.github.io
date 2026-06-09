@@ -1,6 +1,7 @@
 ---
 footer: false
 sidebar: false
+aside: false
 ---
 
 <script setup lang="ts">

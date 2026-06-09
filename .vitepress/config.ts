@@ -11,6 +11,7 @@ export default defineConfig({
   lang: 'zh-CN',
   cleanUrls: true,
   srcDir: './src',
+  srcExclude: ['notes/**'],
   markdown: {
     config(md) {
       md.core.ruler.after('block', 'inject-post-date', (state) => {
@@ -50,50 +51,50 @@ export default defineConfig({
     nav: [
       { text: '博客', link: '/posts', activeMatch: '/posts/' },
       // { text: '演讲', link: '/talks' },
-      { text: '笔记', link: '/notes/delete-local-branch', activeMatch: '/notes/' },
+      // { text: '笔记', link: '/notes/delete-local-branch', activeMatch: '/notes/' },
       { text: '关于我', link: '/me' }
     ],
 
     sidebar: {
-      '/notes/': {
-        base: '/notes/',
-        items: [
-          {
-            text: 'Git',
-            collapsed: false,
-            items: [
-              { text: '删除本地分支', link: 'delete-local-branch' },
-              { text: 'git submodule', link: 'git-submodule' },
-              { text: 'git reset', link: 'git-reset' },
-              { text: '撤销合并操作', link: 'undo-merge' }
-            ]
-          },
-          {
-            text: 'JavaScript',
-            collapsed: false,
-            items: [
-              { text: '箭头函数-括号', link: 'arrow-function-bracket' },
-              { text: 'console.log()', link: 'console-log' }
-            ]
-          },
-          {
-            text: 'CSS',
-            collapsed: false,
-            items: [
-              { text: '伪类', link: 'css-pseudo-class' },
-              { text: '伪元素', link: 'css-pseudo-element' }
-            ]
-          },
-          {
-            text: '其他',
-            collapsed: false,
-            items: [
-              { text: 'corepack', link: 'corepack' },
-              { text: '刷新 DNS 缓存', link: 'refresh-dns-cache' }
-            ]
-          }
-        ]
-      },
+      // '/notes/': {
+      //   base: '/notes/',
+      //   items: [
+      //     {
+      //       text: 'Git',
+      //       collapsed: false,
+      //       items: [
+      //         { text: '删除本地分支', link: 'delete-local-branch' },
+      //         { text: 'git submodule', link: 'git-submodule' },
+      //         { text: 'git reset', link: 'git-reset' },
+      //         { text: '撤销合并操作', link: 'undo-merge' }
+      //       ]
+      //     },
+      //     {
+      //       text: 'JavaScript',
+      //       collapsed: false,
+      //       items: [
+      //         { text: '箭头函数-括号', link: 'arrow-function-bracket' },
+      //         { text: 'console.log()', link: 'console-log' }
+      //       ]
+      //     },
+      //     {
+      //       text: 'CSS',
+      //       collapsed: false,
+      //       items: [
+      //         { text: '伪类', link: 'css-pseudo-class' },
+      //         { text: '伪元素', link: 'css-pseudo-element' }
+      //       ]
+      //     },
+      //     {
+      //       text: '其他',
+      //       collapsed: false,
+      //       items: [
+      //         { text: 'corepack', link: 'corepack' },
+      //         { text: '刷新 DNS 缓存', link: 'refresh-dns-cache' }
+      //       ]
+      //     }
+      //   ]
+      // },
       '/posts/': {
         base: '/posts/',
         items: [

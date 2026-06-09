@@ -1,6 +1,7 @@
 ---
 footer: false
 outline: false
+aside: false
 ---
 
 # 关于我

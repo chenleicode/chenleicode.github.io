@@ -312,8 +312,8 @@ https://vitepress.dev/zh/guide/using-vue
 ```
 
 - [主页](/)
-- [Corepack](../notes/corepack)
-- [Corepack (遇到的问题)](../notes/corepack#遇到的问题)
+- [博客](/posts/)
+- [Mac 初体验](./first-use-mac)
 
 #### 外部链接 {#external-links}
 
