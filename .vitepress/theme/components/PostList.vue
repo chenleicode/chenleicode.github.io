@@ -17,7 +17,7 @@ const postsByYear = computed(() => {
 </script>
 
 <template>
-  <div class="post-archive">
+  <div class="post-list-view">
     <section
       v-for="group in postsByYear"
       :key="group.year"

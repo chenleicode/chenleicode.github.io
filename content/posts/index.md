@@ -4,4 +4,4 @@ sidebar: false
 aside: false
 ---
 
-<PostArchive />
+<PostList />
