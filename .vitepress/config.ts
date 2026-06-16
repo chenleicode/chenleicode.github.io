@@ -10,7 +10,7 @@ export default defineConfig({
   description: '陈磊的个人网站',
   lang: 'zh-CN',
   cleanUrls: true,
-  srcDir: './src',
+  srcDir: './content',
   srcExclude: ['notes/**'],
   markdown: {
     config(md) {

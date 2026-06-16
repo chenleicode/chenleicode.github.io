@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase } from 'vitepress'
-import { data as posts } from '../../.vitepress/posts.data'
+import { data as posts } from '../../posts.data'
 
 const postsByYear = computed(() => {
   const groupedPosts = new Map()
