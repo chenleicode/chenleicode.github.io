@@ -6,6 +6,15 @@ import type { Plugin } from 'vite'
 
 const siteUrl = 'https://chenleicode.top'
 
+function sanitizePostHtml(html: string) {
+  return html
+    .replace(/^\s*<h1(?:\s[^>]*)?>[\s\S]*?<\/h1>\s*/i, '')
+    .replace(
+      /[ \t]*<a\b[^>]*\bclass=(?:"[^"]*\bheader-anchor\b[^"]*"|'[^']*\bheader-anchor\b[^']*')[^>]*>[\s\S]*?<\/a>/gi,
+      ''
+    )
+}
+
 function createFeed() {
   return new Feed({
     title: '陈磊',
@@ -45,7 +54,7 @@ export async function generateRSS(config: SiteConfig) {
       id: `${siteUrl}${url}`,
       link: `${siteUrl}${url}`,
       date: new Date(frontmatter.date),
-      content: html
+      content: sanitizePostHtml(html)
     })
   }
 
@@ -60,14 +69,15 @@ export function rssDevPlugin(): Plugin {
         if (req.url !== '/feed.xml') return next()
 
         const feed = createFeed()
-        const filteredPosts = await loadPosts(false)
+        const filteredPosts = await loadPosts(true)
 
-        for (const { url, frontmatter } of filteredPosts) {
+        for (const { url, frontmatter, html } of filteredPosts) {
           feed.addItem({
             title: frontmatter.title,
             id: `${siteUrl}${url}`,
             link: `${siteUrl}${url}`,
-            date: new Date(frontmatter.date)
+            date: new Date(frontmatter.date),
+            content: sanitizePostHtml(html)
           })
         }
 
