@@ -1,5 +1,7 @@
 ---
 layout: page
+navbar: false
+isHome: true
 ---
 
 <CustomHome />
