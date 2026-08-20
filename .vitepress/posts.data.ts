@@ -43,7 +43,7 @@ function parsePostDate(value: unknown, url: string): ParsedDate {
   return {
     year,
     sortKey: Number(`${year}${month}${day}`),
-    display: `${year}.${month}.${day}`
+    display: `${year}/${month}/${day}`
   }
 }
 

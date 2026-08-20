@@ -1,11 +1,11 @@
 ---
-title: 《恶意》读后感
+title: 读《恶意》
 date: '2024-08-19'
 footer: false
 sidebar: false
 ---
 
-# 《恶意》读后感
+# 读《恶意》
 
 又一次强迫自己读书……
 

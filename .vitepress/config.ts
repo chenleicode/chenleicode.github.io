@@ -12,34 +12,6 @@ export default defineConfig({
   cleanUrls: true,
   srcDir: './content',
   srcExclude: ['notes/**'],
-  markdown: {
-    config(md) {
-      md.core.ruler.after('block', 'inject-post-date', (state) => {
-        const relativePath = state.env.relativePath ?? ''
-
-        if (!relativePath.startsWith('posts/')) {
-          return
-        }
-
-        const headingCloseIndex = state.tokens.findIndex(
-          (token, index) =>
-            token.type === 'heading_close' &&
-            token.tag === 'h1' &&
-            index > 0 &&
-            state.tokens[index - 1]?.type === 'inline'
-        )
-
-        if (headingCloseIndex === -1) {
-          return
-        }
-
-        const postDateToken = new state.Token('html_block', '', 0)
-        postDateToken.content = '<PostDate />\n'
-
-        state.tokens.splice(headingCloseIndex + 1, 0, postDateToken)
-      })
-    }
-  },
 
   head: [
     ['link', { rel: 'icon', href: '/avatar.jpg' }],
@@ -104,7 +76,7 @@ export default defineConfig({
             items: [
               { text: 'GitHub 推送失败网络连接', link: 'github-connect' },
               { text: '安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed', link: 'install-dependency-error' },
-              { text: '《恶意》读后感', link: 'malice' },
+              { text: '读《恶意》', link: 'malice' },
               { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
               { text: 'Mac 初体验', link: 'first-use-mac' }
             ]

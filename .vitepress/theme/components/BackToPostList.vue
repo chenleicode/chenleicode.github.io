@@ -44,14 +44,14 @@ const isPostPage = computed(
 
 <style scoped>
 .post-back-link {
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
 }
 
 .post-back-anchor {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  padding: 0.35rem 0.75rem;
+  padding: 0.55rem 0.95rem;
   border: 1px solid transparent;
   border-radius: 999px;
   background: var(--vp-c-bg-soft);
@@ -73,8 +73,14 @@ const isPostPage = computed(
 }
 
 .post-back-icon {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex: none;
+}
+
+@media (max-width: 640px) {
+  .post-back-link {
+    margin-bottom: 1.25rem;
+  }
 }
 </style>
