@@ -27,63 +27,63 @@ export default defineConfig({
       { text: '关于我', link: '/me' }
     ],
 
-    sidebar: {
-      // '/notes/': {
-      //   base: '/notes/',
-      //   items: [
-      //     {
-      //       text: 'Git',
-      //       collapsed: false,
-      //       items: [
-      //         { text: '删除本地分支', link: 'delete-local-branch' },
-      //         { text: 'git submodule', link: 'git-submodule' },
-      //         { text: 'git reset', link: 'git-reset' },
-      //         { text: '撤销合并操作', link: 'undo-merge' }
-      //       ]
-      //     },
-      //     {
-      //       text: 'JavaScript',
-      //       collapsed: false,
-      //       items: [
-      //         { text: '箭头函数-括号', link: 'arrow-function-bracket' },
-      //         { text: 'console.log()', link: 'console-log' }
-      //       ]
-      //     },
-      //     {
-      //       text: 'CSS',
-      //       collapsed: false,
-      //       items: [
-      //         { text: '伪类', link: 'css-pseudo-class' },
-      //         { text: '伪元素', link: 'css-pseudo-element' }
-      //       ]
-      //     },
-      //     {
-      //       text: '其他',
-      //       collapsed: false,
-      //       items: [
-      //         { text: 'corepack', link: 'corepack' },
-      //         { text: '刷新 DNS 缓存', link: 'refresh-dns-cache' }
-      //       ]
-      //     }
-      //   ]
-      // },
-      '/posts/': {
-        base: '/posts/',
-        items: [
-          {
-            text: '博客',
-            collapsed: false,
-            items: [
-              { text: 'GitHub 推送失败网络连接', link: 'github-connect' },
-              { text: '安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed', link: 'install-dependency-error' },
-              { text: '读《恶意》', link: 'malice' },
-              { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
-              { text: 'Mac 初体验', link: 'first-use-mac' }
-            ]
-          }
-        ]
-      }
-    },
+    // sidebar: {
+    //   '/notes/': {
+    //     base: '/notes/',
+    //     items: [
+    //       {
+    //         text: 'Git',
+    //         collapsed: false,
+    //         items: [
+    //           { text: '删除本地分支', link: 'delete-local-branch' },
+    //           { text: 'git submodule', link: 'git-submodule' },
+    //           { text: 'git reset', link: 'git-reset' },
+    //           { text: '撤销合并操作', link: 'undo-merge' }
+    //         ]
+    //       },
+    //       {
+    //         text: 'JavaScript',
+    //         collapsed: false,
+    //         items: [
+    //           { text: '箭头函数-括号', link: 'arrow-function-bracket' },
+    //           { text: 'console.log()', link: 'console-log' }
+    //         ]
+    //       },
+    //       {
+    //         text: 'CSS',
+    //         collapsed: false,
+    //         items: [
+    //           { text: '伪类', link: 'css-pseudo-class' },
+    //           { text: '伪元素', link: 'css-pseudo-element' }
+    //         ]
+    //       },
+    //       {
+    //         text: '其他',
+    //         collapsed: false,
+    //         items: [
+    //           { text: 'corepack', link: 'corepack' },
+    //           { text: '刷新 DNS 缓存', link: 'refresh-dns-cache' }
+    //         ]
+    //       }
+    //     ]
+    //   },
+    //   '/posts/': {
+    //     base: '/posts/',
+    //     items: [
+    //       {
+    //         text: '博客',
+    //         collapsed: false,
+    //         items: [
+    //           { text: 'GitHub 推送失败网络连接', link: 'github-connect' },
+    //           { text: '安装依赖报错：pngquant failed to build, make sure that libpng-dev is installed', link: 'install-dependency-error' },
+    //           { text: '读《恶意》', link: 'malice' },
+    //           { text: '使用 VitePress 搭建并自动化部署个人网站', link: 'vitepress-build-deploy' },
+    //           { text: 'Mac 初体验', link: 'first-use-mac' }
+    //         ]
+    //       }
+    //     ]
+    //   }
+    // },
 
     search: {
       provider: 'local',
